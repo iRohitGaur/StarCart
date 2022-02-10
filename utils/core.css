@@ -1,0 +1,141 @@
+@import url("https://starlingui.netlify.app/sui.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+@import url("color.css");
+
+body {
+  display: grid;
+  font-size: 1.6rem;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 6rem 1fr auto;
+  width: 100vw;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+/***** Header Starts *****/
+header {
+  grid-area: header;
+  padding: 0 4rem;
+  height: 6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  max-width: var(--MAX-WIDTH);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+header::before {
+  content: "";
+  width: 100vw;
+  height: 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  box-shadow: 0 0 1px 1px var(--STC-PRIMARY-V1);
+}
+header,
+header::before,
+header input,
+header .input_lbl {
+  background: var(--STC-BG);
+}
+.stc_logo_wrapper {
+  gap: 1rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-right: auto;
+}
+.stc_logo {
+  width: 4rem;
+  height: auto;
+}
+.stc_logo_text {
+  line-height: 1;
+}
+.stc_logo_caption {
+  font-size: 1rem;
+  color: var(--STC-PRIMARY);
+}
+.input_icon .fas {
+  top: 1.2rem;
+}
+.sui_avatar .far,
+.sui_avatar .fas,
+.sui_avatar .fal {
+  font-size: 2rem;
+}
+header .sui_btn {
+  font-size: 1.2rem;
+}
+.sui_input input {
+  padding: 6px 15px 4px 15px;
+  border: 1px solid var(--STC-BG-IB);
+}
+.input_icon input {
+  padding-left: 3.6rem;
+}
+.stc_search {
+  width: 80%;
+}
+.stc_cta {
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+  margin-left: auto;
+}
+.bd_num {
+  left: 1.5rem;
+}
+.btn_icon_fa:hover {
+  cursor: pointer;
+}
+/***** Header Ends *****/
+main {
+  grid-area: main;
+  width: 100%;
+  padding: 2rem 0;
+}
+/***** Footer Starts *****/
+footer {
+  grid-area: footer;
+  position: relative;
+  width: 100vw;
+  background: var(--STC-DARK);
+  padding: 2rem 0;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+footer .stc_logo_text,
+footer .sui_btn {
+  color: var(--STC-BG);
+  text-decoration: none;
+}
+footer .sui_btn {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 0;
+  color: var(--STC-DARK-L);
+}
+footer .sui_btn:hover {
+  color: var(--WHITE);
+  text-decoration: underline;
+}
+.ftr_title {
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  color: var(--GRAY);
+}
+/***** Footer Ends *****/

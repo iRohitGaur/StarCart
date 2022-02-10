@@ -1,0 +1,106 @@
+body {
+  background: var(--STC-TEE-BG);
+}
+main {
+  height: 100%;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow-x: hidden;
+  position: relative;
+}
+.auth_tee {
+  width: auto;
+  height: 100%;
+  aspect-ratio: 1/1;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+}
+.login_tee_wrapper {
+  display: grid;
+  z-index: 1;
+}
+.login_tee {
+  font-size: 50rem;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: auto;
+  color: var(--STC-BG-BASE);
+  transition: transform ease 0.5s;
+}
+.tee_right {
+  right: 0;
+}
+.login_signup_wrapper {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background: var(--STC-BG-BASE);
+  width: 100%;
+  max-width: 35rem;
+  max-height: 39rem;
+  overflow-y: hidden;
+  flex-grow: 1;
+  border-radius: 8px;
+  align-items: center;
+  padding: 2rem;
+  margin: auto;
+}
+.login_wrapper,
+.signup_wrapper {
+  width: 100%;
+  align-items: center;
+  margin: auto;
+  transition: transform ease 0.3s;
+}
+.box_title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+.signup_wrapper .box_title {
+  padding-top: 4rem;
+}
+.ep_wrapper {
+  gap: 2.5rem;
+  width: 85%;
+}
+.ep_wrapper input {
+  border: 1px solid var(--STC-BG-IB);
+  font-size: 2rem;
+}
+.ep_check_wrapper {
+  gap: 1.5rem;
+  width: 85%;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+#stc-signup .ep_check_wrapper {
+  margin-top: 2rem;
+}
+.ep_check_wrapper input[type="checkbox"] {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0;
+}
+.login_checkbox_text {
+  font-size: 1.4rem;
+}
+.login_fyp {
+  align-self: flex-end;
+  font-size: 1.2rem;
+}
+main .sui_btn {
+  width: 85%;
+  font-size: 2rem;
+}
+.ep_mt2 {
+  margin: 2.2rem 0 0 0;
+}
+.ep_cna {
+  align-items: center;
+  cursor: pointer;
+}
+.ep_cna span {
+  text-decoration: none;
+}
