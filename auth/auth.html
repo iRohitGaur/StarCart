@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="stylesheet" href="/utils/core.css" />
+    <link rel="stylesheet" href="auth.css" />
+    <title>StarCart - Authentication - Rohit Gaur</title>
+  </head>
+  <body>
+    <header>
+      <div class="stc_logo_wrapper flex_rw">
+        <img class="stc_logo" src="/assets/starling.svg" alt="" />
+        <div class="flex_cl">
+          <span class="stc_logo_text">StarCart</span>
+          <span class="stc_logo_caption">little bird-tee store</span>
+        </div>
+      </div>
+
+      <div class="stc_search">
+        <div class="sui_input input_icon">
+          <div class="input_desc">
+            <span class="input_lbl">search</span>
+            <span class="input_info"></span>
+          </div>
+          <input type="text" />
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+      <div class="stc_cta flex_rw">
+        <button class="btn_icon_fa">
+          <div class="sui_avatar">
+            <i class="far fa-heart"></i>
+            <div class="bd_num bd_red">0</div>
+          </div>
+        </button>
+        <button class="btn_icon_fa">
+          <div class="sui_avatar">
+            <i class="fas fa-shopping-cart"></i>
+            <div class="bd_num bd_red">0</div>
+          </div>
+        </button>
+        <button class="sui_btn">Login</button>
+      </div>
+    </header>
+    <main>
+      <div class="login_signup_wrapper flex_cl">
+        <div id="stc-login" class="login_wrapper flex_cl">
+          <div class="box_title">Login</div>
+          <div class="ep_wrapper flex_cl">
+            <div class="sui_input">
+              <div class="input_desc">
+                <span class="input_lbl">email</span>
+                <span class="input_info"></span>
+              </div>
+              <input type="email" />
+            </div>
+            <div class="sui_input">
+              <div class="input_desc">
+                <span class="input_lbl">password</span>
+                <span class="input_info"></span>
+              </div>
+              <input type="password" />
+            </div>
+          </div>
+
+          <div class="ep_check_wrapper flex_cl">
+            <a href="#" class="btn_txt login_fyp">Forgot your password?</a>
+            <div class="flex_rw flex_g1">
+              <input type="checkbox" value="" />
+              <span class="login_checkbox_text">Remember me</span>
+            </div>
+          </div>
+
+          <button class="sui_btn ep_mt2" id="stc-home">Login</button>
+
+          <div class="ep_cna ep_mt2 h5">
+            <span id="stc-signup-btn" class="btn_txt"
+              >Create New Account &nbsp;&nbsp;<i
+                class="h5 fas fa-chevron-right"
+              ></i
+            ></span>
+          </div>
+        </div>
+        <div id="stc-signup" class="signup_wrapper flex_cl">
+          <div class="box_title">Signup</div>
+
+          <div class="ep_wrapper flex_cl">
+            <div class="sui_input">
+              <div class="input_desc">
+                <span class="input_lbl">email</span>
+                <span class="input_info"></span>
+              </div>
+              <input type="email" />
+            </div>
+            <div class="sui_input">
+              <div class="input_desc">
+                <span class="input_lbl">password</span>
+                <span class="input_info"></span>
+              </div>
+              <input type="password" />
+            </div>
+          </div>
+
+          <div class="ep_check_wrapper flex_cl">
+            <div class="flex_rw flex_g1">
+              <input type="checkbox" value="" />
+              <span class="login_checkbox_text"
+                >I accept all
+                <a href="#" class="btn_txt">Terms & Conditions</a></span
+              >
+            </div>
+          </div>
+
+          <button class="sui_btn ep_mt2">Signup</button>
+
+          <div class="ep_cna ep_mt2 h5">
+            <span id="stc-login-btn" class="btn_txt"
+              >Already have an Account &nbsp;&nbsp;<i
+                class="h5 fas fa-chevron-right"
+              ></i
+            ></span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="about_us flex_cl">
+        <div class="ftr_title stc_logo_wrapper flex_rw">
+          <img class="stc_logo" src="/assets/starling.svg" alt="" />
+          <div class="flex_cl">
+            <span class="stc_logo_text">StarCart</span>
+            <span class="stc_logo_caption">little bird-tee store</span>
+          </div>
+        </div>
+        <a class="sui_btn btn_txt" href="#">Contact Us</a>
+        <a class="sui_btn btn_txt" href="#">About Us</a>
+        <a class="sui_btn btn_txt" href="#">Careers</a>
+      </div>
+      <div class="help flex_cl">
+        <span class="ftr_title">HELP</span>
+        <a class="sui_btn btn_txt" href="#">Payments</a>
+        <a class="sui_btn btn_txt" href="#">Shipping</a>
+        <a class="sui_btn btn_txt" href="#">Returns</a>
+        <a class="sui_btn btn_txt" href="#">FAQ</a>
+      </div>
+      <div class="policy flex_cl">
+        <span class="ftr_title">POLICY</span>
+        <a class="sui_btn btn_txt" href="#">Return Policy</a>
+        <a class="sui_btn btn_txt" href="#">Terms Of Use</a>
+        <a class="sui_btn btn_txt" href="#">Security</a>
+        <a class="sui_btn btn_txt" href="#">Privacy</a>
+      </div>
+      <div class="social flex_cl">
+        <span class="ftr_title">SOCIAL</span>
+        <a class="sui_btn btn_txt" href="#">Twitter</a>
+        <a class="sui_btn btn_txt" href="#">Facebook</a>
+        <a class="sui_btn btn_txt" href="#">YouTube</a>
+        <a class="sui_btn btn_txt" href="#">Instagram</a>
+      </div>
+    </footer>
+    <script src="auth.js"></script>
+  </body>
+</html>
