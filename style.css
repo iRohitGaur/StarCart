@@ -1,0 +1,70 @@
+main {
+  display: grid;
+  grid-template-areas:
+    "carousel"
+    "hcontent";
+  grid-template-rows: 50rem 1fr;
+  width: 100vw;
+}
+.carousel {
+  grid-area: carousel;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  overflow: hidden;
+  background: var(--STC-PRIMARY-V1);
+  position: relative;
+}
+.home_content {
+  grid-area: hcontent;
+  width: 100%;
+  align-items: center;
+}
+.carousel img {
+  width: 100%;
+  height: 100%;
+}
+.carousel_btn {
+  position: absolute;
+  bottom: 2rem;
+  left: calc(50% - 13rem);
+  font-size: 3rem;
+  opacity: 0.8;
+  width: 26rem;
+}
+.stc_feat {
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  align-items: center;
+  gap: 1rem;
+}
+.feat_wrapper {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pop_wrapper {
+  max-width: var(--MAX-WIDTH);
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.pop_wrapper img {
+  width: 100%;
+}
+.pop_wrapper img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 4px 0 var(--STC-DARK);
+}
+.pop_cat {
+  position: relative;
+}
+.pop_cat span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: var(--STC-PRIMARY-V1);
+  opacity: 0.7;
+}
