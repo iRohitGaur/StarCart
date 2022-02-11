@@ -1,4 +1,4 @@
-const loginBtn = document.querySelector("#stc-login-btn");
-loginBtn.addEventListener("click", () => {
-  window.location = "/auth/auth.html";
+const shopNowBtn = document.querySelector("#shop-now-btn");
+shopNowBtn.addEventListener("click", () => {
+  window.location = "/products/products.html";
 });

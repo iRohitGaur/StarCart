@@ -1,8 +1,7 @@
-const loginArea = document.querySelector("#stc-login");
-const signupArea = document.querySelector("#stc-signup");
+const loginArea = document.querySelector("#stc-login-area");
+const signupArea = document.querySelector("#stc-signup-area");
 const loginBtn = document.querySelector("#stc-login-btn");
 const signupBtn = document.querySelector("#stc-signup-btn");
-const homePageLoginBtn = document.querySelector("#stc-home");
 
 loginBtn.addEventListener("click", () => {
   loginArea.style.transform = "translateY(0)";
@@ -11,7 +10,4 @@ loginBtn.addEventListener("click", () => {
 signupBtn.addEventListener("click", () => {
   loginArea.style.transform = "translateY(-39rem)";
   signupArea.style.transform = "translateY(-39rem)";
-});
-homePageLoginBtn.addEventListener("click", () => {
-  window.location = "/index.html";
 });

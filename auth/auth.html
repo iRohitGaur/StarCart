@@ -27,7 +27,7 @@
   </head>
   <body>
     <header>
-      <div class="stc_logo_wrapper flex_rw">
+      <div id="stc-logo" class="stc_logo_wrapper flex_rw">
         <img class="stc_logo" src="/assets/starling.svg" alt="" />
         <div class="flex_cl">
           <span class="stc_logo_text">StarCart</span>
@@ -46,24 +46,24 @@
         </div>
       </div>
       <div class="stc_cta flex_rw">
-        <button class="btn_icon_fa">
+        <button id="stc-wishlist" class="btn_icon_fa">
           <div class="sui_avatar">
             <i class="far fa-heart"></i>
             <div class="bd_num bd_red">0</div>
           </div>
         </button>
-        <button class="btn_icon_fa">
+        <button id="stc-cart" class="btn_icon_fa">
           <div class="sui_avatar">
             <i class="fas fa-shopping-cart"></i>
             <div class="bd_num bd_red">0</div>
           </div>
         </button>
-        <button class="sui_btn">Login</button>
+        <button id="stc-login" class="sui_btn">Login</button>
       </div>
     </header>
     <main>
       <div class="login_signup_wrapper flex_cl">
-        <div id="stc-login" class="login_wrapper flex_cl">
+        <div id="stc-login-area" class="login_wrapper flex_cl">
           <div class="box_title">Login</div>
           <div class="ep_wrapper flex_cl">
             <div class="sui_input">
@@ -90,7 +90,7 @@
             </div>
           </div>
 
-          <button class="sui_btn ep_mt2" id="stc-home">Login</button>
+          <button class="sui_btn ep_mt2">Login</button>
 
           <div class="ep_cna ep_mt2 h5">
             <span id="stc-signup-btn" class="btn_txt"
@@ -100,7 +100,7 @@
             ></span>
           </div>
         </div>
-        <div id="stc-signup" class="signup_wrapper flex_cl">
+        <div id="stc-signup-area" class="signup_wrapper flex_cl">
           <div class="box_title">Signup</div>
 
           <div class="ep_wrapper flex_cl">
@@ -178,5 +178,6 @@
       </div>
     </footer>
     <script src="auth.js"></script>
+    <script src="/header.js"></script>
   </body>
 </html>

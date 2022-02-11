@@ -5,6 +5,7 @@ main {
     "hcontent";
   grid-template-rows: 50rem 1fr;
   width: 100vw;
+  padding-top: 6rem;
 }
 .carousel {
   grid-area: carousel;
