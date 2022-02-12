@@ -1,8 +1,6 @@
 main {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr;
-  padding-top: 8rem;
 }
 .filter_area {
   color: black;
@@ -78,7 +76,6 @@ main {
 .product_area {
   padding: 0 2rem;
   align-content: flex-start;
-  overflow-y: scroll;
 }
 .product_area .sui_card {
   width: 20rem;
