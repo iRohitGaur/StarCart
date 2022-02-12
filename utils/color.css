@@ -17,7 +17,7 @@
   --RED: red;
   --GREEN: green;
   --GRAY: gray;
-  --YELOW: #ed9f3a;
+  --YELLOW: #ed9f3a;
   --ORANGE: #f45b19;
 
   --MAX-WIDTH: 100vw;
@@ -32,10 +32,10 @@
   color: var(--GREEN);
 }
 .stc_yellow {
-  background: var(--YELOW);
+  background: var(--YELLOW);
 }
 .stc_yellow_icon {
-  color: var(--YELOW);
+  color: var(--YELLOW);
 }
 .stc_orange {
   background: var(--ORANGE);
