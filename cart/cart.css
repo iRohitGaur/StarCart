@@ -54,6 +54,7 @@ main {
 .checkout_total {
   border-top: 1px solid var(--STC-BG-IB);
   margin-top: 1rem;
+  font-weight: 600;
 }
 .checkout_area .sui_btn {
   margin-top: 2rem;
