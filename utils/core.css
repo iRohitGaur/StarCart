@@ -98,7 +98,7 @@ header .sui_btn {
   margin-left: auto;
 }
 .bd_num {
-  left: 1.5rem;
+  color: var(--WHITE);
 }
 .btn_icon_fa:hover {
   cursor: pointer;

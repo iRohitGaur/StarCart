@@ -24,19 +24,19 @@ main {
   border-radius: 4px;
   padding: 6px;
   padding-left: 4.5rem;
-  border: 2px solid var(--VARIANT-2P1);
+  border: 2px solid var(--VARIANT-2-DARK1);
   outline: none;
   cursor: pointer;
   transition: all ease 0.5s;
 }
 .cart_product_qty select:hover {
-  background: var(--VARIANT-2P1);
+  background: var(--VARIANT-2-DARK1);
 }
 .checkout_area {
   padding: 2rem 4rem;
   height: fit-content;
   border-radius: 4px;
-  box-shadow: 0 0 1px 0 var(--BLACK-C);
+  box-shadow: 0 0 1px 0 var(--BLACK-OPACITY-C);
 }
 .checkout_title {
   font-size: 2rem;

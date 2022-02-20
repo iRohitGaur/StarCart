@@ -44,10 +44,10 @@
   color: var(--ORANGE);
 }
 .stc_primary {
-  background: var(--PRIMARY-P1);
+  background: var(--PRIMARY-DARK1);
 }
 .stc_primary_icon {
-  color: var(--PRIMARY-P1);
+  color: var(--PRIMARY-DARK1);
 }
 .stc_secondary {
   background: var(--STC-DARK);
