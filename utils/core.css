@@ -23,32 +23,26 @@ body::-webkit-scrollbar {
 /***** Header Starts *****/
 header {
   grid-area: header;
-  padding: 0 4rem;
-  height: 6rem;
+  padding: 1rem 4rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "logo search cta"
+    "search-mobile search-mobile search-mobile";
   place-items: center;
-  max-width: var(--MAX-WIDTH);
-  width: 100vw;
   position: fixed;
-  top: 0;
-  z-index: 2;
-}
-header::before {
-  content: "";
-  width: 100vw;
-  height: 6rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  width: 100%;
+  margin: auto;
   box-shadow: 0 0 1px 1px var(--STC-PRIMARY-V1);
+  z-index: 1;
 }
 header,
-header::before,
 header input,
-header .input_lbl {
+header .sui_input_lbl,
+header .sui_input_info {
   background: var(--STC-BG);
+}
+header .sui_avatar i {
+  color: var(--PRIMARY);
 }
 .stc_logo_wrapper {
   gap: 1rem;
@@ -56,6 +50,7 @@ header .input_lbl {
   font-weight: 600;
   margin-right: auto;
 }
+.sui_logo_wrapper,
 .stc_logo_wrapper {
   cursor: pointer;
 }
@@ -77,6 +72,9 @@ header .input_lbl {
 .sui_avatar .fas,
 .sui_avatar .fal {
   font-size: 2rem;
+}
+#mode {
+  font-size: 2.6rem;
 }
 header .sui_btn {
   font-size: 1.2rem;
@@ -115,10 +113,40 @@ header .sui_btn {
   background: var(--STC-BG);
   padding: 1rem;
   border-radius: 0 0 8px 8px;
+  z-index: 2;
 }
 .show_dropdown {
   display: revert;
 }
+.sui_nav_mobile .fa-bars {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  :root {
+    font-size: 9px;
+  }
+  body {
+    grid-template-rows: 12rem 1fr auto;
+  }
+  header.sui_nav_mobile {
+    padding: 1rem 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 8px;
+  }
+  .sui_nav_mobile .fa-bars {
+    display: revert;
+  }
+  .sui_nav_mobile .sui_cta {
+    background: var(--STC-BG);
+  }
+  main .filter_area {
+    margin-left: 0;
+  }
+}
+
 /***** Header Ends *****/
 main {
   grid-area: main;

@@ -2,6 +2,16 @@ main {
   padding: 2rem;
   grid-template-columns: 1fr 32rem;
 }
+@media only screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+  .cart_products_area .card_list {
+    width: 100%;
+  }
+}
 .card_list {
   width: 95%;
   border-radius: 4px;

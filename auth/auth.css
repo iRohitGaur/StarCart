@@ -5,7 +5,6 @@ main {
   gap: 2rem;
   display: grid;
   grid-template-columns: 1fr;
-  overflow-x: hidden;
   position: relative;
 }
 .auth_tee {
@@ -84,6 +83,10 @@ main {
 }
 .login_checkbox_text {
   font-size: 1.4rem;
+}
+.input_lbl,
+.input_info {
+  background: var(--STC-BG-BASE);
 }
 .login_fyp {
   align-self: flex-end;

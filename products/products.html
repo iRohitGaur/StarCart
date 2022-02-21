@@ -26,43 +26,65 @@
     <title>StarCart - Products - Rohit Gaur</title>
   </head>
   <body>
-    <header>
-      <div id="stc-logo" class="stc_logo_wrapper flex_row">
-        <img class="stc_logo" src="/assets/starling.svg" alt="" />
+    <header class="sui_nav_mobile">
+      <div id="stc-logo" class="sui_logo_wrapper flex_row">
+        <img class="sui_logo" src="/assets/starling.svg" alt="logo" />
         <div class="flex_column">
-          <span class="stc_logo_text">StarCart</span>
-          <span class="stc_logo_caption">little bird-tee store</span>
+          <span class="sui_logo_text">StarCart</span>
+          <span class="sui_logo_caption">little bird-tee store</span>
         </div>
       </div>
 
-      <div class="stc_search">
+      <div class="sui_search">
         <div class="sui_input input_icon">
           <div class="input_desc">
-            <span class="input_lbl">search</span>
-            <span class="input_info"></span>
+            <span class="sui_input_lbl">search</span>
+            <span class="sui_input_info"></span>
           </div>
           <input type="text" />
           <i class="fas fa-search"></i>
         </div>
       </div>
-      <div class="stc_cta flex_row">
-        <button id="stc-wishlist" class="btn_icon_fa">
-          <div class="sui_avatar">
-            <i class="far fa-heart"></i>
-            <div class="bd_num bd_red">0</div>
+
+      <div class="sui_cta_wrapper flex_row">
+        <div class="flex_row flex_align_center flex_gap2">
+          <button id="filter" class="btn_icon_fa">
+            <i class="fas fa-filter"></i>
+          </button>
+          <button id="burger" class="btn_icon_fa">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <div class="sui_cta collapsed_cta hide_cta flex_row">
+          <button id="stc-wishlist" class="btn_icon_fa">
+            <div class="sui_avatar">
+              <i class="far fa-heart"></i>
+              <div class="bd_num bd_red">88</div>
+            </div>
+          </button>
+          <button id="stc-cart" class="btn_icon_fa">
+            <div class="sui_avatar">
+              <i class="fas fa-shopping-cart"></i>
+              <div class="bd_num bd_red">0</div>
+            </div>
+          </button>
+          <button id="stc-login" class="sui_btn" id="login">Login</button>
+        </div>
+      </div>
+
+      <div class="sui_search_mobile">
+        <div class="sui_input input_icon">
+          <div class="input_desc">
+            <span class="sui_input_lbl">search</span>
+            <span class="sui_input_info"></span>
           </div>
-        </button>
-        <button id="stc-cart" class="btn_icon_fa">
-          <div class="sui_avatar">
-            <i class="fas fa-shopping-cart"></i>
-            <div class="bd_num bd_red">0</div>
-          </div>
-        </button>
-        <button id="stc-login" class="sui_btn">Login</button>
+          <input type="text" />
+          <i class="fas fa-search"></i>
+        </div>
       </div>
     </header>
     <main>
-      <div class="filter_area flex_column">
+      <div class="collapsed filter_area flex_column">
         <div class="filter_title_section flex_row flex_align_center">
           <span>FILTERS</span>
           <a href="./products.html" class="sui_btn btn_txt">CLEAR ALL</a>
@@ -634,7 +656,8 @@
         <a class="sui_btn btn_txt" href="#">Instagram</a>
       </div>
     </footer>
-    <script src="/header.js"></script>
     <script src="https://starlingui.netlify.app/pages/components/card/card.js"></script>
+    <script src="/header.js"></script>
+    <script src="products.js"></script>
   </body>
 </html>

@@ -76,6 +76,7 @@ main {
 .product_area {
   padding: 0 2rem;
   align-content: flex-start;
+  justify-content: space-around;
 }
 .product_area .sui_card {
   width: 20rem;
@@ -103,4 +104,28 @@ main {
 }
 .product_area .sui_btn {
   font-size: 1.2rem;
+}
+#filter {
+  display: none;
+  font-size: 2.2rem;
+}
+@media only screen and (max-width: 600px) {
+  main {
+    position: relative;
+  }
+  #filter {
+    display: revert;
+  }
+  .filter_area {
+    position: fixed;
+    background: var(--STC-BG-BASE);
+    width: 100vw;
+    height: 100vh;
+    top: 5rem;
+    padding-top: 2rem;
+    z-index: 1;
+  }
+  .collapsed {
+    display: none;
+  }
 }
