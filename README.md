@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img alt="starling" src="./assets/starling.svg" width="1048px" height="238px" />
+<img alt="starling" src="./src/assets/starling.svg" width="1048px" height="238px" />
 
 StarCart is an e-Commerce website built with HTML and CSS. It offers apparel and stickers related to birds.
 
@@ -23,32 +23,33 @@ StarCart is an e-Commerce website built with HTML and CSS. It offers apparel and
 ---
 
 ## Video Demo:
+
 https://user-images.githubusercontent.com/10892977/154997628-cd65881b-a263-482e-a6e0-23fca066d436.mp4
 
 ---
 
 ## Quick Start
 
-To view different pages of StarCart you can visit the following links: 
+To view different pages of StarCart you can visit the following links:
 
 ### P0 Screens
 
-- [Authentication](https://starcart.netlify.app/auth/auth.html)
-- [Home Page](https://starcart.netlify.app/)
-- [Product Listing Page](https://starcart.netlify.app/products/products.html)
-- [Filters - Price, Category, Ratings](https://starcart.netlify.app/products/products.html)
-- [Wishlist Management](https://starcart.netlify.app/wishlist/wishlist.html)
-- [Cart Management](https://starcart.netlify.app/cart/cart.html)
-- [Logout](https://starcart.netlify.app/wishlist/wishlist.html)
+- [Home Page](https://starcart.netlify.app)
+- [Product Listing Page](https://starcart.netlify.app/products)
+- [Filters - Price, Category, Ratings](https://starcart.netlify.app/products)
+- [Wishlist Management](https://starcart.netlify.app/wishlist)
+- [Cart Management](https://starcart.netlify.app/cart)
+- [Logout](https://starcart.netlify.app/wishlist)
 
 #### P1 Screens
 
-- [Search](https://starcart.netlify.app/)
-- [Checkout](https://starcart.netlify.app/cart/cart.html)
+- [Search](https://starcart.netlify.app/products)
+- [Checkout](https://starcart.netlify.app/cart)
 
 ### Features Added
 
 - Responsive Site (Both desktop and mobile responsive)
+- Dark mode
 
 ---
 
