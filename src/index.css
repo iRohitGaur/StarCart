@@ -1,0 +1,9 @@
+@import url("https://starlingui.netlify.app/sui.css");
+
+html[sui-mode="dark"] {
+  --PRIMARY: var(--PRIMARY-LIGHT2);
+}
+body {
+  background: var(--BG);
+  color: var(--TEXT);
+}
