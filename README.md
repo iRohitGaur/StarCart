@@ -4,13 +4,13 @@
 
 <img alt="starling" src="./src/assets/starling.svg" width="1048px" height="238px" />
 
-StarCart is an e-Commerce website built with HTML and CSS. It offers apparel and stickers related to birds.
+StarCart is an e-Commerce website built with React. It offers apparel and stickers related to birds.
 
 [![GitHub followers](https://img.shields.io/github/followers/irohitgaur?style=social)](https://github.com/irohitgaur)
 &emsp;
-![Forks](https://img.shields.io/github/forks/irohitgaur/starlingui)
+![Forks](https://img.shields.io/github/forks/irohitgaur/starcart)
 &emsp;
-![Stars](https://img.shields.io/github/stars/irohitgaur/starlingui)
+![Stars](https://img.shields.io/github/stars/irohitgaur/starcart)
 &emsp;
 [![Twitter Follow](https://img.shields.io/twitter/follow/irohitgaur?style=social)](https://twitter.com/iRohitGaur)
 
