@@ -1,0 +1,113 @@
+header.sui_nav_mobile {
+  grid-area: header;
+  box-shadow: 0 0 1px 1px var(--SHADE);
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.sui_logo_wrapper {
+  cursor: pointer;
+}
+header,
+header input,
+header .sui_input_lbl,
+header .sui_input_info {
+  background: var(--BG);
+}
+.sui_nav_mobile .sui_cta svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+header .sui_btn {
+  font-size: 1.2rem;
+}
+.sui_input input {
+  padding: 6px 15px 4px 15px;
+  border: 1px solid var(--TEXT);
+}
+.input_icon input {
+  padding-left: 3.6rem;
+}
+.sui_cta {
+  gap: 2rem;
+}
+.bd_num {
+  color: var(--WHITE);
+}
+.btn_icon_fa {
+  display: flex;
+  align-items: center;
+}
+.btn_icon_fa:hover {
+  cursor: pointer;
+}
+#stc-profile {
+  font-size: 2.2rem;
+  position: relative;
+}
+.user_profile_dropdown_menu {
+  display: none;
+  position: absolute;
+  bottom: -6rem;
+  right: -2rem;
+  background: var(--BG);
+  padding: 1rem;
+  border-radius: 0 0 8px 8px;
+  z-index: 2;
+}
+.show_dropdown {
+  display: revert;
+}
+.sui_nav_mobile .fa-bars {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  :root {
+    font-size: 9px;
+  }
+  body {
+    grid-template-rows: 12rem 1fr auto;
+  }
+  header.sui_nav_mobile {
+    padding: 1rem 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  :root {
+    font-size: 8px;
+  }
+  main .filter_area {
+    margin-left: 0;
+  }
+  .sui_nav_mobile .sui_cta {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background: var(--BG);
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .sui_nav_mobile .fa-bars {
+    display: revert;
+  }
+  .sui_nav_mobile .sui_cta {
+    box-shadow: 0 0 1px 1px var(--SHADE);
+    flex-direction: row;
+    position: absolute;
+    background: var(--BG);
+    top: 5rem;
+    right: -1rem;
+    z-index: 9;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .sui_nav_mobile .hide_cta {
+    display: none;
+  }
+}
