@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Fa6SolidBars } from "../../../assets/Icons";
 import CartButton from "./CartButton";
 import DarkModeButton from "./DarkModeButton";
@@ -22,8 +23,10 @@ function CTA() {
         }`}
       >
         <DarkModeButton />
-        <FavoriteButton count={0} />
-        <CartButton count={0} />
+        <Link to="/wishlist">
+          <FavoriteButton />
+        </Link>
+        <CartButton />
         <LoginButton />
       </div>
     </div>

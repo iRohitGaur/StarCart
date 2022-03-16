@@ -6,6 +6,14 @@ header.sui_nav_mobile {
   position: sticky;
   top: 0;
 }
+header.stc_nav_mobile {
+  padding: 1rem 4rem;
+  display: grid;
+  grid-template-areas: "logo search cta";
+  place-items: center;
+  width: 100%;
+  margin: auto;
+}
 .sui_logo_wrapper {
   cursor: pointer;
 }
@@ -61,6 +69,14 @@ header .sui_btn {
 }
 .sui_nav_mobile .fa-bars {
   display: none;
+}
+.without_searchbar {
+  grid-template-areas: "logo search cta";
+}
+a:-webkit-any-link {
+  color: var(--TEXT);
+  cursor: pointer;
+  text-decoration: none;
 }
 @media only screen and (max-width: 768px) {
   :root {
