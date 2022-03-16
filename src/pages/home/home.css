@@ -1,4 +1,4 @@
-body {
+#root {
   display: grid;
   font-size: 1.6rem;
   grid-template-areas:
@@ -7,10 +7,10 @@ body {
     "footer";
   grid-template-rows: auto 1fr auto;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
 }
-main {
+.homepage {
   grid-area: main;
   display: grid;
   grid-template-areas:

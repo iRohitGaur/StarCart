@@ -7,17 +7,18 @@ const productsData = [
       bg: "stc_secondary",
     },
     image:
-      "https://ih1.redbubble.net/image.723788174.3155/ssrco,classic_tee,womens,9ec0d5:0d26d5c715,front_alt,tall_three_quarter,750x1000.jpg",
-    imageAlt: "classic_tee,womens",
-    title: "Trash Gryphons: Pigeon Rat",
+      "https://ih1.redbubble.net/image.2442677018.2593/rco,womens_premium_t_shirt,womens,x1770,fafafa:ca443f4786,front-c,170,40,1000,1000-bg,f8f8f8.jpg",
+    imageAlt: "womens_premium_t_shirt",
+    title: "Purple-throated Euphonia Premium Scoop T-Shirt",
     seller: "Mel Tillery (Cyaneus)",
     sellerUrl: "http://cyaneus.com/",
     description:
-      "This literal flying rat is actually somewhat clever and quite harmless, but large groups of them are considered a nuisance in urban environments.",
+      "There are five subspecies of purple-throated euphonia. It is a small, South American songbird that often forages in mixed species flocks.",
     price: {
       current: 20.5,
       old: 25,
     },
+    quantity: 5,
     category: "tshirt",
   },
   {
@@ -39,6 +40,7 @@ const productsData = [
       current: 20.5,
       old: 25,
     },
+    quantity: 5,
     category: "tshirt",
   },
   {
@@ -60,6 +62,7 @@ const productsData = [
       current: 20.5,
       old: 25,
     },
+    quantity: 5,
     category: "tshirt",
   },
   {
@@ -81,6 +84,7 @@ const productsData = [
       current: 20.5,
       old: 25,
     },
+    quantity: 5,
     category: "tshirt",
   },
   {
@@ -91,17 +95,18 @@ const productsData = [
       bg: "stc_yellow",
     },
     image:
-      "https://ih1.redbubble.net/image.2442677018.2593/rco,womens_premium_t_shirt,womens,x1770,fafafa:ca443f4786,front-c,170,40,1000,1000-bg,f8f8f8.jpg",
-    imageAlt: "womens_premium_t_shirt",
-    title: "Purple-throated Euphonia Premium Scoop T-Shirt",
+      "https://ih1.redbubble.net/image.579363621.8008/ssrco,chiffon_top,womens,black,front,square_three_quarter,x1000-bg,f8f8f8.1u3.jpg",
+    imageAlt: "chiffon_top,womens",
+    title: "Lovebird Chiffon Top",
     seller: "Mel Tillery (Cyaneus)",
     sellerUrl: "http://cyaneus.com/",
     description:
-      "There are five subspecies of purple-throated euphonia. It is a small, South American songbird that often forages in mixed species flocks.",
+      "Sheer and slightly silky with an edge-to-edge printed front panel, great for layering.",
     price: {
       current: 20.5,
       old: 25,
     },
+    quantity: 5,
     category: "tshirt",
   },
   {
@@ -112,17 +117,18 @@ const productsData = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.647394694.7571/ssrco,classic_tee,mens,541e68:68f9e309b0,front_alt,tall_portrait,750x1000.u4.jpg",
+      "https://ih1.redbubble.net/image.647394694.7571/ra,raglan,x1950,white_blue,front-c,160,90,1000,1000-bg,f8f8f8.u4.jpg",
     imageAlt: "classic_tee,mens",
-    title: "Gouldian Finch Classic T-Shirt",
+    title: "Gouldian Finch Baseball ¾ Sleeve T-Shirt",
     seller: "Mel Tillery (Cyaneus)",
     sellerUrl: "http://cyaneus.com/",
     description:
-      "The standard, traditional t-shirt for everyday wear. Classic, generous, boxy fit.",
+      "That vintage athletic look, with contrast 3/4 baseball sleeves and collar.",
     price: {
       current: 20.5,
       old: 25,
     },
+    quantity: 5,
     category: "tshirt",
   },
 ];

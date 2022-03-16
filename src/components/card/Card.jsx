@@ -1,8 +1,19 @@
 import React from "react";
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import {
+  MdiCardsHeart,
+  MdiCardsHeartOutline,
+  IcOutlineShoppingCart,
+} from "../../assets/Icons";
+import { useWishlist, useCart } from "../../context";
 
-function Card({ product, btnTitle, btnAction }) {
+function Card({ product, btnTitle }) {
   const [hoverTitle, setHoverTitle] = useState("");
+
+  const { wishlistProducts, toggleWishlist } = useWishlist();
+  const { cartProducts, addToCart } = useCart();
+  const navigate = useNavigate();
 
   const {
     overlay,
@@ -14,7 +25,24 @@ function Card({ product, btnTitle, btnAction }) {
     description,
     price,
   } = product;
+
   const isOverlay = overlay.text !== "";
+
+  const isProductInWishlist =
+    wishlistProducts.findIndex((p) => p.id === product.id) === -1
+      ? false
+      : true;
+
+  const isProductInCart =
+    cartProducts.findIndex((p) => p.id === product.id) === -1 ? false : true;
+
+  const handleCardEvent = () => {
+    isProductInCart ? navigate("/cart") : addToCart(product);
+  };
+
+  const currentPath = useLocation();
+  const isHorizonalCard =
+    currentPath.pathname === "/wishlist" || currentPath.pathname === "/cart";
 
   let timer;
 
@@ -30,13 +58,20 @@ function Card({ product, btnTitle, btnAction }) {
   };
 
   return (
-    <div className={`sui_card ${isOverlay ? "card_badge" : ""}`}>
+    <div
+      className={`sui_card ${isOverlay ? "card_badge" : ""} ${
+        isHorizonalCard ? "card_list" : ""
+      }`}
+    >
       <div className="card_img_wrapper">
         {isOverlay && (
           <span className={`card_overlay ${overlay.bg}`}>{overlay.text}</span>
         )}
-        <button className="sui_btn_float float_top_right stc_red_icon">
-          <i className="far fa-heart"></i>
+        <button
+          className="sui_btn_float float_top_right stc_red_icon"
+          onClick={() => toggleWishlist(product)}
+        >
+          {isProductInWishlist ? <MdiCardsHeart /> : <MdiCardsHeartOutline />}
         </button>
         <img src={image} alt={imageAlt} />
       </div>
@@ -64,9 +99,13 @@ function Card({ product, btnTitle, btnAction }) {
               {100 - (price.current / price.old) * 100}% off
             </span>
           </span>
-          <button className="sui_btn" onClick={btnAction}>
-            <i className="btn_icon fas fa-shopping-cart"></i>
-            {btnTitle}
+          <button
+            className="sui_btn flex_row flex_justify_center flex_align_center flex_gap1"
+            onClick={handleCardEvent}
+          >
+            <IcOutlineShoppingCart />
+            {isProductInCart ? "Go to cart" : btnTitle}
+            {/*TODO: on visit of that page it does not show Go to cart yet by default if the prod is already in cart*/}
           </button>
         </div>
       </div>
