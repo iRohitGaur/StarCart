@@ -4,7 +4,7 @@ import { Carousel, Card, PopularCategory } from "../../components";
 import { productsData, popularCategoriesData } from "../../data";
 import { useDocumentTitle } from "../../utils";
 
-function Homepage() {
+function Home() {
   useDocumentTitle("StarCart - Home - Rohit Gaur");
 
   const handleCategorySelection = (category) => {};
@@ -44,4 +44,4 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default Home;

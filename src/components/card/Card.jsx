@@ -5,6 +5,7 @@ import {
   MdiCardsHeart,
   MdiCardsHeartOutline,
   IcOutlineShoppingCart,
+  MdiTrashCanOutline,
 } from "../../assets/Icons";
 import { useWishlist, useCart } from "../../context";
 
@@ -12,7 +13,12 @@ function Card({ product, btnTitle }) {
   const [hoverTitle, setHoverTitle] = useState("");
 
   const { wishlistProducts, toggleWishlist } = useWishlist();
-  const { cartProducts, addToCart } = useCart();
+  const {
+    cartProducts,
+    addToCart,
+    updateProductQuantityInCart,
+    removeFromCart,
+  } = useCart();
   const navigate = useNavigate();
 
   const {
@@ -99,14 +105,41 @@ function Card({ product, btnTitle }) {
               {100 - (price.current / price.old) * 100}% off
             </span>
           </span>
-          <button
-            className="sui_btn flex_row flex_justify_center flex_align_center flex_gap1"
-            onClick={handleCardEvent}
-          >
-            <IcOutlineShoppingCart />
-            {isProductInCart ? "Go to cart" : btnTitle}
-            {/*TODO: on visit of that page it does not show Go to cart yet by default if the prod is already in cart*/}
-          </button>
+          {currentPath.pathname === "/cart" ? (
+            <div className="cart_product_qty_wrapper flex_row flex_align_center flex_gap2">
+              <div className="cart_product_qty flex_row flex_align_center flex_gap1">
+                <label htmlFor="qty">Qty:</label>
+                <select
+                  name="qty"
+                  id="qty"
+                  value={product.cartQuantity}
+                  onChange={(e) =>
+                    updateProductQuantityInCart(product, Number(e.target.value))
+                  }
+                >
+                  {[..."12345"].map((val) => (
+                    <option key={val} value={val}>
+                      {val}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <button
+                className="sui_btn btn_v1 flex_row flex_align_center"
+                onClick={() => removeFromCart(product)}
+              >
+                <MdiTrashCanOutline />
+              </button>
+            </div>
+          ) : (
+            <button
+              className="sui_btn flex_row flex_justify_center flex_align_center flex_gap1"
+              onClick={handleCardEvent}
+            >
+              <IcOutlineShoppingCart />
+              {isProductInCart ? "Go to cart" : btnTitle}
+            </button>
+          )}
         </div>
       </div>
     </div>

@@ -10,16 +10,17 @@ function Carousel() {
   });
 
   const startTransition = () => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setState((dt) => ({ ...dt, transition: "parallax_slider" }));
     }, 2600);
+    return timeout;
   };
 
   useEffect(() => {
-    startTransition();
+    let timeout = startTransition();
     const timer = setInterval(() => {
+      timeout = startTransition();
       setState((data) => {
-        startTransition();
         return data.count === 3
           ? {
               count: 0,
@@ -33,7 +34,10 @@ function Carousel() {
             };
       });
     }, 3000);
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(timer);
+      clearTimeout(timeout);
+    };
   }, []);
 
   return (

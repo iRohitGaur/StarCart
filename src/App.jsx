@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Footer, Nav } from "./components";
 import { WishlistProvider, CartProvider } from "./context";
-import { Homepage, Wishlist, Page404 } from "./pages";
+import { Home, Wishlist, Page404, Cart } from "./pages";
 
 function App() {
   return (
@@ -11,8 +11,9 @@ function App() {
           <Nav />
 
           <Routes>
-            <Route path="/" element={<Homepage />}></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="/wishlist" element={<Wishlist />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
             <Route path="*" element={<Page404 />}></Route>
           </Routes>
         </CartProvider>
