@@ -26,7 +26,9 @@ function CTA() {
         <Link to="/wishlist">
           <FavoriteButton />
         </Link>
-        <CartButton />
+        <Link to="/cart">
+          <CartButton />
+        </Link>
         <LoginButton />
       </div>
     </div>

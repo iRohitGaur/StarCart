@@ -10,19 +10,16 @@ function CartProvider({ children }) {
   const addToCart = (product) => {
     setCartProducts((prd) => {
       const findIndex = prd.findIndex((p) => p.id === product.id);
-      if (findIndex === -1) {
-        return [...prd, product];
-      } else {
-        return prd.map((p) => {
-          if (p.id === product.id) {
-            return p.quantity === product.quantity
-              ? p
-              : { ...p, quantity: p.quantity + 1 };
-          }
-          return p;
-        });
-      }
+      return findIndex === -1 ? [...prd, { ...product, cartQuantity: 1 }] : prd;
     });
+  };
+
+  const updateProductQuantityInCart = (product, qty) => {
+    setCartProducts((prd) =>
+      prd.map((p) =>
+        p.id === product.id ? { ...product, cartQuantity: qty } : p
+      )
+    );
   };
 
   const removeFromCart = (product) => {
@@ -30,7 +27,7 @@ function CartProvider({ children }) {
   };
 
   return (
-    <CartContext.Provider value={{ cartProducts, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cartProducts, addToCart, updateProductQuantityInCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
