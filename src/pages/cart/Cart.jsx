@@ -29,11 +29,9 @@ function Cart() {
   return (
     <main className="cartpage">
       <div className="cart_products_area flex_column flex_gap2">
-        {cartProducts.map((product) => {
-          return (
-            <Card key={product.id} product={product} btnTitle="Move to cart" />
-          );
-        })}
+        {cartProducts.map((product) => (
+          <Card key={product.id} product={product} btnTitle="Move to cart" />
+        ))}
       </div>
       <div className="checkout_area flex_column">
         <div className="checkout_title">Checkout</div>
