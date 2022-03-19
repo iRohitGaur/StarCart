@@ -28,7 +28,7 @@ export default function useProductsReducer() {
       case "RESET_FILTERS":
         return initialState;
       default:
-        return state;
+        throw new Error(`Unhandled type: ${action.type}`);
     }
   }, initialState);
 
