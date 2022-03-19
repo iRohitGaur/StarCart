@@ -12,7 +12,7 @@ function Wishlist() {
   return (
     <main className="wishlistpage">
       <div className="wishlist_title">Your Wishlist</div>
-      <div className="product_area flex_row flex_gap2 flex_wrap">
+      <div className="wishlist_area flex_row flex_gap2 flex_wrap">
         {wishlistProducts.map((product) => {
           return (
             <Card key={product.id} product={product} btnTitle="Move to cart" />
