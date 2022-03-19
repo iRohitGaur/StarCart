@@ -9,7 +9,7 @@ function FilterByBirds({ state, dispatch }) {
           <input
             type="checkbox"
             name=""
-            checked={state.songbird}
+            checked={state.bird.includes("songbird")}
             onChange={() =>
               dispatch({
                 type: "FILTER",
@@ -26,7 +26,7 @@ function FilterByBirds({ state, dispatch }) {
           <input
             type="checkbox"
             name=""
-            checked={state.dove}
+            checked={state.bird.includes("dove")}
             onChange={() =>
               dispatch({ type: "FILTER", filterType: "bird", filter: "dove" })
             }
@@ -39,7 +39,7 @@ function FilterByBirds({ state, dispatch }) {
           <input
             type="checkbox"
             name=""
-            checked={state.parrot}
+            checked={state.bird.includes("parrot")}
             onChange={() =>
               dispatch({ type: "FILTER", filterType: "bird", filter: "parrot" })
             }
@@ -52,7 +52,7 @@ function FilterByBirds({ state, dispatch }) {
           <input
             type="checkbox"
             name=""
-            checked={state.lovebird}
+            checked={state.bird.includes("lovebird")}
             onChange={() =>
               dispatch({
                 type: "FILTER",

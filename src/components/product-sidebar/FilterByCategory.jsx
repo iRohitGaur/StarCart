@@ -9,7 +9,7 @@ function FilterByCategory({ state, dispatch }) {
           <input
             type="checkbox"
             name=""
-            checked={state.tshirt}
+            checked={state.category.includes("tshirt")}
             onChange={() =>
               dispatch({
                 type: "FILTER",
@@ -26,7 +26,7 @@ function FilterByCategory({ state, dispatch }) {
           <input
             type="checkbox"
             name=""
-            checked={state.hoodie}
+            checked={state.category.includes("hoodie")}
             onChange={() =>
               dispatch({
                 type: "FILTER",
@@ -43,7 +43,7 @@ function FilterByCategory({ state, dispatch }) {
           <input
             type="checkbox"
             name=""
-            checked={state.sticker}
+            checked={state.category.includes("sticker")}
             onChange={() =>
               dispatch({
                 type: "FILTER",
