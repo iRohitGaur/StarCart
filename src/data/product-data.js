@@ -18,8 +18,10 @@ const productsData = [
       current: 20.5,
       old: 25,
     },
-    quantity: 5,
+    quantity: 3,
     category: "tshirt",
+    bird: "songbird",
+    rating: 4.5,
   },
   {
     id: "stcprd002",
@@ -37,11 +39,13 @@ const productsData = [
     description:
       " As its name implies, the pink-headed fruit dove primarily eats fruit. They are shy birds and not very much is known about their lives in the wild.",
     price: {
-      current: 20.5,
-      old: 25,
+      current: 15,
+      old: 19,
     },
-    quantity: 5,
+    quantity: 7,
     category: "tshirt",
+    bird: "dove",
+    rating: 4,
   },
   {
     id: "stcprd003",
@@ -59,11 +63,13 @@ const productsData = [
     description:
       "A rainbow colored rosella to represent the rainbow flag. Like other parrots, the rosella is an intelligent, noisy, and sociable bird. Although it readily learns to mimic human sounds, it is not easily tamed.",
     price: {
-      current: 20.5,
-      old: 25,
+      current: 5,
+      old: 20,
     },
     quantity: 5,
     category: "tshirt",
+    bird: "parrot",
+    rating: 3.5,
   },
   {
     id: "stcprd004",
@@ -81,11 +87,13 @@ const productsData = [
     description:
       "Edge-to-edge front print makes a big, bold, undeniable statement. Regular fit and soft feel",
     price: {
-      current: 20.5,
-      old: 25,
+      current: 17,
+      old: 21,
     },
     quantity: 5,
     category: "tshirt",
+    bird: "parrot",
+    rating: 3,
   },
   {
     id: "stcprd005",
@@ -103,11 +111,13 @@ const productsData = [
     description:
       "Sheer and slightly silky with an edge-to-edge printed front panel, great for layering.",
     price: {
-      current: 20.5,
-      old: 25,
+      current: 42,
+      old: 49,
     },
     quantity: 5,
     category: "tshirt",
+    bird: "lovebird",
+    rating: 2.5,
   },
   {
     id: "stcprd006",
@@ -125,11 +135,13 @@ const productsData = [
     description:
       "That vintage athletic look, with contrast 3/4 baseball sleeves and collar.",
     price: {
-      current: 20.5,
-      old: 25,
+      current: 9,
+      old: 20,
     },
     quantity: 5,
     category: "tshirt",
+    bird: "finch",
+    rating: 2,
   },
 ];
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { carouselData } from "../../data/carousel-data";
 
 function Carousel() {
@@ -49,9 +50,11 @@ function Carousel() {
         alt="classic tee two_models"
       />
       <img className={transition} src={image.right} alt="classic tee women" />
-      <button className="carousel_btn sui_btn" id="shop-now-btn">
-        Shop Now
-      </button>
+      <Link to="/products">
+        <button className="carousel_btn sui_btn" id="shop-now-btn">
+          Shop Now
+        </button>
+      </Link>
     </div>
   );
 }

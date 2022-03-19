@@ -1,11 +1,12 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import "./card.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   MdiCardsHeart,
   MdiCardsHeartOutline,
   IcOutlineShoppingCart,
   MdiTrashCanOutline,
+  UiwStarOn,
 } from "../../assets/Icons";
 import { useWishlist, useCart } from "../../context";
 
@@ -63,6 +64,13 @@ function Card({ product, btnTitle }) {
     setHoverTitle("");
   };
 
+  const ratingBackgroundColor =
+    product.rating >= 4
+      ? "product_rating_good"
+      : product.rating >= 3
+      ? "product_rating_medium"
+      : "product_rating_bad";
+
   return (
     <div
       className={`sui_card ${isOverlay ? "card_badge" : ""} ${
@@ -79,6 +87,10 @@ function Card({ product, btnTitle }) {
         >
           {isProductInWishlist ? <MdiCardsHeart /> : <MdiCardsHeartOutline />}
         </button>
+        <div className={`product_rating ${ratingBackgroundColor}`}>
+          {product.rating}
+          <UiwStarOn />
+        </div>
         <img src={image} alt={imageAlt} />
       </div>
       <div className="card_content_wrapper">
@@ -102,7 +114,7 @@ function Card({ product, btnTitle }) {
             ${price.current}
             <span className="card_price_old">${price.old}</span>
             <span className="card_price_off">
-              {100 - (price.current / price.old) * 100}% off
+              {Math.round(100 - (price.current / price.old) * 100)}% off
             </span>
           </span>
           {currentPath.pathname === "/cart" ? (
@@ -117,7 +129,12 @@ function Card({ product, btnTitle }) {
                     updateProductQuantityInCart(product, Number(e.target.value))
                   }
                 >
-                  {[..."12345"].map((val) => (
+                  {[
+                    ...Array.from(
+                      { length: product.quantity > 5 ? 5 : product.quantity },
+                      (_, i) => i + 1
+                    ),
+                  ].map((val) => (
                     <option key={val} value={val}>
                       {val}
                     </option>

@@ -96,6 +96,9 @@ a:-webkit-any-link {
   main .filter_area {
     margin-left: 0;
   }
+  .sui_cta_wrapper {
+    flex-direction: row;
+  }
   .sui_nav_mobile .sui_cta {
     display: flex;
     flex-direction: row;
@@ -109,8 +112,11 @@ a:-webkit-any-link {
   }
 }
 @media only screen and (max-width: 400px) {
+  .sui_cta_wrapper {
+    flex-direction: column;
+  }
   .sui_nav_mobile .fa-bars {
-    display: revert;
+    display: flex;
   }
   .sui_nav_mobile .sui_cta {
     box-shadow: 0 0 1px 1px var(--SHADE);

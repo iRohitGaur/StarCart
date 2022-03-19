@@ -16,15 +16,9 @@ function Home() {
         <div className="stc_feat flex_column">
           Featured Products
           <div className="feat_wrapper flex_row flex_gap2">
-            {productsData.map((product) => {
-              return (
-                <Card
-                  key={product.id}
-                  product={product}
-                  btnTitle="Add to cart"
-                />
-              );
-            })}
+            {productsData.map((product) => (
+              <Card key={product.id} product={product} btnTitle="Add to cart" />
+            ))}
           </div>
         </div>
         <div className="stc_feat flex_column">
