@@ -230,3 +230,163 @@ export function UiwStarOn(props) {
     </svg>
   );
 }
+export function FaSolidTshirt(props) {
+  return (
+    <svg width="1.25em" height="1em" viewBox="0 0 640 512" {...props}>
+      <path
+        fill="currentColor"
+        d="M631.2 96.5L436.5 0C416.4 27.8 371.9 47.2 320 47.2S223.6 27.8 203.5 0L8.8 96.5c-7.9 4-11.1 13.6-7.2 21.5l57.2 114.5c4 7.9 13.6 11.1 21.5 7.2l56.6-27.7c10.6-5.2 23 2.5 23 14.4V480c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32V226.3c0-11.8 12.4-19.6 23-14.4l56.6 27.7c7.9 4 17.5.8 21.5-7.2L638.3 118c4-7.9.8-17.6-7.1-21.5z"
+      ></path>
+    </svg>
+  );
+}
+export function MdiAccountPlusOutline(props) {
+  return (
+    <svg width="2rem" height="2rem" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="currentColor"
+        d="M15 4a4 4 0 0 0-4 4a4 4 0 0 0 4 4a4 4 0 0 0 4-4a4 4 0 0 0-4-4m0 1.9a2.1 2.1 0 1 1 0 4.2A2.1 2.1 0 0 1 12.9 8A2.1 2.1 0 0 1 15 5.9M4 7v3H1v2h3v3h2v-3h3v-2H6V7H4m11 6c-2.67 0-8 1.33-8 4v3h16v-3c0-2.67-5.33-4-8-4m0 1.9c2.97 0 6.1 1.46 6.1 2.1v1.1H8.9V17c0-.64 3.1-2.1 6.1-2.1Z"
+      ></path>
+    </svg>
+  );
+}
+export function MdiAccountCheckOutline(props) {
+  return (
+    <svg width="2rem" height="2rem" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="currentColor"
+        d="m21.1 12.5l1.4 1.41l-6.53 6.59L12.5 17l1.4-1.41l2.07 2.08l5.13-5.17M11 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2a2 2 0 0 0 2 2a2 2 0 0 0 2-2a2 2 0 0 0-2-2m0 7c.68 0 1.5.09 2.41.26l-1.67 1.67l-.74-.03c-2.97 0-6.1 1.46-6.1 2.1v1.1h6.2L13 20H3v-3c0-2.66 5.33-4 8-4Z"
+      ></path>
+    </svg>
+  );
+}
+export function IconParkOutlineEmailFail(props) {
+  return (
+    <svg
+      width="1.5rem"
+      height="1.5rem"
+      viewBox="0 0 48 48"
+      style={{ color: "red" }}
+      {...props}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="4"
+      >
+        <path d="M44 24V9H4v30h20m16-8l-8 8m0-8l8 8"></path>
+        <path d="m4 9l20 15L44 9"></path>
+      </g>
+    </svg>
+  );
+}
+export function IconParkOutlineEmailSuccessfully(props) {
+  return (
+    <svg
+      width="1.5rem"
+      height="1.5rem"
+      viewBox="0 0 48 48"
+      style={{ color: "green" }}
+      {...props}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="4"
+      >
+        <path d="M44 24V9H4v30h20m7-3l5 4l8-10"></path>
+        <path d="m4 9l20 15L44 9"></path>
+      </g>
+    </svg>
+  );
+}
+export function IconoirPasswordError(props) {
+  return (
+    <svg
+      width="1.5rem"
+      height="1.5rem"
+      viewBox="0 0 24 24"
+      style={{ color: "red" }}
+      {...props}
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="m15.121 20.364l2.122-2.121m0 0l2.121-2.122m-2.121 2.122L15.12 16.12m2.122 2.122l2.121 2.121M21 13V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h6m1-4.99l.01-.011m3.99.011l.01-.011M8 11.01l.01-.011"
+      ></path>
+    </svg>
+  );
+}
+export function IconoirPasswordPass(props) {
+  return (
+    <svg
+      width="1.5rem"
+      height="1.5rem"
+      viewBox="0 0 24 24"
+      style={{ color: "green" }}
+      {...props}
+    >
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.5"
+        d="M21 13V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h7m2.5 2.5l2 2l4-4M12 11.01l.01-.011m3.99.011l.01-.011M8 11.01l.01-.011"
+      ></path>
+    </svg>
+  );
+}
+export function LucideUserX(props) {
+  return (
+    <svg
+      width="1.5rem"
+      height="1.5rem"
+      viewBox="0 0 24 24"
+      style={{ color: "red" }}
+      {...props}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      >
+        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+        <circle cx="8.5" cy="7" r="4"></circle>
+        <path d="m18 8l5 5m0-5l-5 5"></path>
+      </g>
+    </svg>
+  );
+}
+export function LucideUserCheck(props) {
+  return (
+    <svg
+      width="1.5rem"
+      height="1.5rem"
+      viewBox="0 0 24 24"
+      style={{ color: "green" }}
+      {...props}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      >
+        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+        <circle cx="8.5" cy="7" r="4"></circle>
+        <path d="m17 11l2 2l4-4"></path>
+      </g>
+    </svg>
+  );
+}

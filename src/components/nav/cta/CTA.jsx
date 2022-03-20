@@ -35,7 +35,9 @@ function CTA() {
         <Link to="/cart">
           <CartButton />
         </Link>
-        <LoginButton />
+        <Link to="/auth">
+          <LoginButton />
+        </Link>
       </div>
     </div>
   );

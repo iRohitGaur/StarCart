@@ -5,23 +5,14 @@ import { NotoV1Owl, NotoChicken } from "../../../assets/Icons";
 const preferDarkQuery = "(prefers-color-scheme: dark)";
 
 function DarkModeButton() {
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    // RG: Check if user has a preference
-    const mediaQuery = window.matchMedia(preferDarkQuery);
-    // RG: Check if user has a prefered mode set in localStorage.
-    // If not then check for system preference match and provide the mode
-    const savedTheme =
+  // RG: PERF: lazy state initialization
+  // RG: Check if user has a prefered mode set in localStorage.
+  // If not then check for system preference match and provide the mode
+  const [theme, setTheme] = useState(
+    () =>
       localStorage.getItem("sui-mode") ??
-      (mediaQuery.matches ? "dark" : "light");
-
-    // RG: set theme based on the mode
-    setTheme(() => {
-      document.documentElement.setAttribute("sui-mode", savedTheme);
-      return savedTheme;
-    });
-  }, []);
+      (window.matchMedia(preferDarkQuery).matches ? "dark" : "light")
+  );
 
   // RG: Every time the "theme" changes, update the document and localStorage
   useEffect(() => {
