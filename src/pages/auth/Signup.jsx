@@ -9,6 +9,17 @@ function Signup({ moveUp, setMoveUp }) {
     email: "",
     password: "",
   });
+
+  const isValidEmail = signupData.email.match(
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  )
+    ? true
+    : false;
+
+  const isValidPassword = signupData.password.length > 5;
+
+  const isValidName = signupData.name.length > 1;
+
   return (
     <div
       className={`stc_signup signup_wrapper flex_column ${
@@ -23,6 +34,7 @@ function Signup({ moveUp, setMoveUp }) {
           label="name"
           status=""
           type="text"
+          validation={isValidName}
           value={signupData.name}
           onChange={(e) =>
             setSignupData((d) => ({ ...d, name: e.target.value }))
@@ -33,6 +45,7 @@ function Signup({ moveUp, setMoveUp }) {
           label="email"
           status=""
           type="email"
+          validation={isValidEmail}
           value={signupData.email}
           onChange={(e) =>
             setSignupData((d) => ({ ...d, email: e.target.value }))
@@ -43,6 +56,7 @@ function Signup({ moveUp, setMoveUp }) {
           label="password"
           status=""
           type="password"
+          validation={isValidPassword}
           value={signupData.password}
           onChange={(e) =>
             setSignupData((d) => ({ ...d, password: e.target.value }))
@@ -60,7 +74,15 @@ function Signup({ moveUp, setMoveUp }) {
         </div>
       </div>
 
-      <button className="sui_btn ep_mt2">Signup</button>
+      <button
+        className={`sui_btn ep_mt2 ${
+          isValidName && isValidEmail && isValidPassword
+            ? ""
+            : "sui_btn_disabled"
+        }`}
+      >
+        Signup
+      </button>
 
       <div className="ep_cna ep_mt2 h5">
         <span

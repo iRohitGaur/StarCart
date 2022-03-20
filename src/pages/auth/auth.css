@@ -124,6 +124,11 @@ svg.rotate_tee {
 button {
   cursor: pointer;
 }
+.sui_btn_disabled {
+  pointer-events: none;
+  background: var(--GRAY-DARK);
+  border: 2px solid var(--GRAY-DARK);
+}
 .sui_input {
   padding: 5px 10px 2px;
 }
