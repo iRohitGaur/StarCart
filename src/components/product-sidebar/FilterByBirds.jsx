@@ -1,6 +1,9 @@
 import React from "react";
+import { useProduct } from "../../context";
 
-function FilterByBirds({ state, dispatch }) {
+function FilterByBirds() {
+  const { state, dispatch } = useProduct();
+
   return (
     <ul className="filter_list_section">
       <div className="filter_list_section_title">Filter by Birds</div>
@@ -69,12 +72,29 @@ function FilterByBirds({ state, dispatch }) {
           <input
             type="checkbox"
             name=""
-            checked={state.finch}
+            checked={state.bird.includes("finch")}
             onChange={() =>
               dispatch({ type: "FILTER", filterType: "bird", filter: "finch" })
             }
           />
           Finch
+        </label>
+      </li>
+      <li>
+        <label>
+          <input
+            type="checkbox"
+            name=""
+            checked={state.bird.includes("fairywren")}
+            onChange={() =>
+              dispatch({
+                type: "FILTER",
+                filterType: "bird",
+                filter: "fairywren",
+              })
+            }
+          />
+          Fairywren
         </label>
       </li>
     </ul>

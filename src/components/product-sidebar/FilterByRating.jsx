@@ -1,7 +1,10 @@
 import React from "react";
+import { useProduct } from "../../context";
 import RadioButton from "./RadioButton";
 
-function FilterByRating({ state, dispatch }) {
+function FilterByRating() {
+  const { state, dispatch } = useProduct();
+
   return (
     <ul className="filter_list_section">
       <div className="filter_list_section_title">Ratings</div>

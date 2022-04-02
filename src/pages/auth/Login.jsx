@@ -1,12 +1,16 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MdiAccountPlusOutline } from "../../assets/Icons";
-import { Input } from "../../components";
+import { Input, Loader } from "../../components";
+import { useAuth } from "../../context";
+import { useAxios } from "../../utils";
 
 const guestLogin = { email: "guest@rohit.xyz", password: "Guest@123" };
 
 function Login({ moveUp, setMoveUp }) {
+  const { response, loading, operation } = useAxios();
   const [loginData, setLoginData] = useState({ email: "", password: "" });
+  const { setUserAndToken } = useAuth();
 
   const isValidEmail = loginData.email.match(
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -15,6 +19,21 @@ function Login({ moveUp, setMoveUp }) {
     : false;
 
   const isValidPassword = loginData.password.length > 5;
+
+  const handleLogin = () => {
+    operation({
+      method: "post",
+      url: "/api/auth/login",
+      data: loginData,
+    });
+  };
+
+  useEffect(() => {
+    if (response !== undefined && response.foundUser !== null) {
+      localStorage.setItem("starcart-user-token", response.encodedToken);
+      setUserAndToken(response.foundUser, response.encodedToken);
+    }
+  }, [response, setUserAndToken]);
 
   return (
     <div className={`login_wrapper flex_column ${moveUp ? "move_up" : ""}`}>
@@ -62,6 +81,7 @@ function Login({ moveUp, setMoveUp }) {
         className={`sui_btn ep_mt2 ${
           isValidEmail && isValidPassword ? "" : "sui_btn_disabled"
         }`}
+        onClick={handleLogin}
       >
         Login
       </button>
@@ -75,6 +95,7 @@ function Login({ moveUp, setMoveUp }) {
           Create a New Account
         </span>
       </div>
+      {loading && <Loader fullpage={true} />}
     </div>
   );
 }

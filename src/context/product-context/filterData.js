@@ -1,42 +1,9 @@
-import { useReducer } from "react";
-import { productsData } from "../data/product-data";
-
-export default function useProductsReducer() {
-  const initialState = {
-    productData: productsData,
-    price: 50,
-    rating: 1,
-    sort: null,
-    category: [],
-    bird: [],
-  };
-
-  const [state, dispatch] = useReducer((state, action) => {
-    switch (action.type) {
-      case "SETVALUE":
-        return {
-          ...state,
-          [action.actionKey]: action.actionValue,
-        };
-      case "FILTER":
-        return {
-          ...state,
-          [action.filterType]: state[action.filterType].includes(action.filter)
-            ? state[action.filterType].filter((type) => type !== action.filter)
-            : [...state[action.filterType], action.filter],
-        };
-      case "RESET_FILTERS":
-        return initialState;
-      default:
-        throw new Error(`Unhandled type: ${action.type}`);
-    }
-  }, initialState);
-
+export default function filterData(initialState, state) {
   // RG: Filter based on Category
   let filteredData =
     state.category.length !== 0
-      ? productsData.filter((p) => state.category.includes(p.category))
-      : productsData;
+      ? state.productData.filter((p) => state.category.includes(p.category))
+      : [...state.productData];
 
   // RG: Filter based on Birds
   if (state.bird.length !== 0) {
@@ -65,5 +32,5 @@ export default function useProductsReducer() {
       filteredData.sort((a, b) => b.rating - a.rating);
     }
   }
-  return { filteredData, state, dispatch };
+  return filteredData;
 }

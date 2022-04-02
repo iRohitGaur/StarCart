@@ -1,14 +1,18 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MdiAccountCheckOutline } from "../../assets/Icons";
-import { Input } from "../../components";
+import { Input, Loader } from "../../components";
+import { useAuth } from "../../context";
+import { useAxios } from "../../utils";
 
 function Signup({ moveUp, setMoveUp }) {
+  const { response, loading, operation } = useAxios();
   const [signupData, setSignupData] = useState({
-    name: "",
+    firstName: "",
     email: "",
     password: "",
   });
+  const { setUserAndToken } = useAuth();
 
   const isValidEmail = signupData.email.match(
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -18,7 +22,22 @@ function Signup({ moveUp, setMoveUp }) {
 
   const isValidPassword = signupData.password.length > 5;
 
-  const isValidName = signupData.name.length > 1;
+  const isValidName = signupData.firstName.length > 1;
+
+  const handleSignup = () => {
+    operation({
+      method: "post",
+      url: "/api/auth/signup",
+      data: signupData,
+    });
+  };
+
+  useEffect(() => {
+    if (response !== undefined && response.createdUser !== null) {
+      localStorage.setItem("starcart-user-token", response.encodedToken);
+      setUserAndToken(response.createdUser, response.encodedToken);
+    }
+  }, [response, setUserAndToken]);
 
   return (
     <div
@@ -35,9 +54,9 @@ function Signup({ moveUp, setMoveUp }) {
           status=""
           type="text"
           validation={isValidName}
-          value={signupData.name}
+          value={signupData.firstName}
           onChange={(e) =>
-            setSignupData((d) => ({ ...d, name: e.target.value }))
+            setSignupData((d) => ({ ...d, firstName: e.target.value }))
           }
         />
         <Input
@@ -80,6 +99,7 @@ function Signup({ moveUp, setMoveUp }) {
             ? ""
             : "sui_btn_disabled"
         }`}
+        onClick={handleSignup}
       >
         Signup
       </button>
@@ -93,6 +113,7 @@ function Signup({ moveUp, setMoveUp }) {
           Already have an Account
         </span>
       </div>
+      {loading && <Loader fullpage={true} />}
     </div>
   );
 }
