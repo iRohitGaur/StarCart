@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./home.css";
 import { Carousel, Card, PopularCategory } from "../../components";
-import { popularCategoriesData } from "../../data";
-import { useDocumentTitle } from "../../utils";
+import { useAxios, useDocumentTitle } from "../../utils";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useProduct } from "../../context";
 
@@ -11,15 +10,24 @@ function Home() {
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const { featuredProducts, loading } = useProduct();
-  const [productData, setProductData] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const { response, operation } = useAxios();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
   useEffect(() => {
-    setProductData(featuredProducts);
-  }, [featuredProducts]);
+    operation({
+      method: "get",
+      url: "/api/categories",
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    response && response.categories && setCategories(response.categories);
+  }, [response]);
 
   const handleCategorySelection = (category) => {
     navigate(`/products?category=${category}`);
@@ -34,7 +42,7 @@ function Home() {
           <div className="feat_wrapper flex_row flex_gap2">
             {loading
               ? [..."123456"].map((i) => <Card key={i} />)
-              : productData
+              : featuredProducts
                   .filter((p) => p.featured)
                   .map((product) => (
                     <Card
@@ -48,7 +56,7 @@ function Home() {
         <div className="stc_feat flex_column">
           Popular Categories
           <div className="pop_wrapper">
-            {popularCategoriesData.map((popCat) => (
+            {categories.map((popCat) => (
               <PopularCategory
                 key={popCat.id}
                 category={popCat}

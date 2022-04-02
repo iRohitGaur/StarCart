@@ -1,5 +1,3 @@
-import { v4 as uuid } from "uuid";
-
 /**
  * Category Database can be added here.
  * You can add category of your wish with different attributes
@@ -7,21 +5,27 @@ import { v4 as uuid } from "uuid";
 
 export const categories = [
   {
-    _id: uuid(),
-    categoryName: "fiction",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+    id: "stcpopcat001",
+    image:
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648894522/ra_womens_tshirt_x1900_101010_01c5ca27c6_front-c_140_125_1000_1000-bg_f8f8f8.u1_bwnrcp.jpg",
+    imageAlt: "womens_tshirt",
+    title: "T-Shirts",
+    category: "tshirt",
   },
   {
-    _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    id: "stcpopcat002",
+    image:
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648894522/sss_small_product_square_1000x1000_njxoxb.jpg",
+    imageAlt: "small,starling_sticker",
+    title: "Stickers",
+    category: "sticker",
   },
   {
-    _id: uuid(),
-    categoryName: "horror",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    id: "stcpopcat003",
+    image:
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648894522/ssrco_lightweight_hoodie_mens_grey_lightweight_hoodie_front_square_three_quarter_x1000-bg_f8f8f8.2u3_sc2pkp.jpg",
+    imageAlt: "lightweight_hoodie,mens",
+    title: "Hoodies",
+    category: "hoodie",
   },
 ];
