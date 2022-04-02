@@ -1,4 +1,3 @@
-import React from "react";
 import "./nav.css";
 import { Logo, Search, CTA } from "./index";
 import { useLocation } from "react-router-dom";

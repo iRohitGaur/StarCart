@@ -1,0 +1,26 @@
+.stc_toast_stack {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+}
+.stc_toast_fade {
+  animation: fadeout 2s linear;
+}
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+}

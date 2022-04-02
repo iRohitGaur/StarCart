@@ -1,13 +1,14 @@
 import React from "react";
-import { useFilter } from "../../context";
+import { useFilter, useProduct } from "../../context";
 import FilterByBirds from "./FilterByBirds";
 import FilterByCategory from "./FilterByCategory";
 import FilterByPrice from "./FilterByPrice";
-import SortByPrice from "./SortByPriceOrRating";
-import SortByRating from "./FilterByRating";
+import SortByPriceOrRating from "./SortByPriceOrRating";
+import FilterByRating from "./FilterByRating";
 
-function ProductSidebar({ state, dispatch }) {
+function ProductSidebar() {
   const { collapsed } = useFilter();
+  const { dispatch } = useProduct();
 
   return (
     <div className={`${collapsed ? "collapsed" : ""} filter_area flex_column`}>
@@ -20,11 +21,11 @@ function ProductSidebar({ state, dispatch }) {
           CLEAR
         </button>
       </div>
-      <SortByPrice state={state} dispatch={dispatch} />
-      <SortByRating state={state} dispatch={dispatch} />
-      <FilterByPrice state={state} dispatch={dispatch} />
-      <FilterByCategory state={state} dispatch={dispatch} />
-      <FilterByBirds state={state} dispatch={dispatch} />
+      <SortByPriceOrRating />
+      <FilterByRating />
+      <FilterByPrice />
+      <FilterByCategory />
+      <FilterByBirds />
     </div>
   );
 }

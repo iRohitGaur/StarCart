@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./cart.css";
 import { useDocumentTitle } from "../../utils";
 import { Card } from "../../components";
 import { useCart } from "../../context";
 import { Fa6SolidDove } from "../../assets/Icons";
+import { useLocation } from "react-router-dom";
 
 function Cart() {
   useDocumentTitle("StarCart - Cart - Rohit Gaur");
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const { cartProducts } = useCart();
 

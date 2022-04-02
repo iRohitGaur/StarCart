@@ -1,6 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useProduct } from "../../context";
 
-function FilterByCategory({ state, dispatch }) {
+function FilterByCategory() {
+  const { state, dispatch } = useProduct();
+  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const cat = searchParams.get("category");
+    if (cat) {
+      dispatch({
+        type: "FILTER",
+        filterType: "category",
+        filter: cat,
+      });
+      navigate("/products");
+    }
+  }, [dispatch, navigate, searchParams]);
+
   return (
     <ul className="filter_list_section">
       <div className="filter_list_section_title">Categories</div>

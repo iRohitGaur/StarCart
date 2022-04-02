@@ -1,57 +1,29 @@
 import React from "react";
-import RadioButton from "./RadioButton";
+import SortRadioButton from "./SortRadioButton";
 
-function SortByPriceOrRating({ state, dispatch }) {
+function SortByPriceOrRating() {
   return (
     <ul className="filter_list_section">
       <div className="filter_list_section_title">Sort</div>
-      <RadioButton
-        name="sortByPriceOrRating"
+      <SortRadioButton
+        name="sortByPrice"
         label="Price: Low to High"
-        checked={state.sort === "priceLowToHigh"}
-        dispatch={() =>
-          dispatch({
-            type: "SETVALUE",
-            actionKey: "sort",
-            actionValue: "priceLowToHigh",
-          })
-        }
+        currentSort="priceLowToHigh"
       />
-      <RadioButton
-        name="sortByPriceOrRating"
+      <SortRadioButton
+        name="sortByPrice"
         label="Price: High to Low"
-        checked={state.sort === "priceHighToLow"}
-        dispatch={() =>
-          dispatch({
-            type: "SETVALUE",
-            actionKey: "sort",
-            actionValue: "priceHighToLow",
-          })
-        }
+        currentSort="priceHighToLow"
       />
-      <RadioButton
-        name="sortByPriceOrRating"
+      <SortRadioButton
+        name="sortByRating"
         label="Rating: Low to High"
-        checked={state.sort === "ratingLowToHigh"}
-        dispatch={() =>
-          dispatch({
-            type: "SETVALUE",
-            actionKey: "sort",
-            actionValue: "ratingLowToHigh",
-          })
-        }
+        currentSort="ratingLowToHigh"
       />
-      <RadioButton
-        name="sortByPriceOrRating"
+      <SortRadioButton
+        name="sortByRating"
         label="Rating: High to Low"
-        checked={state.sort === "ratingHighToLow"}
-        dispatch={() =>
-          dispatch({
-            type: "SETVALUE",
-            actionKey: "sort",
-            actionValue: "ratingHighToLow",
-          })
-        }
+        currentSort="ratingHighToLow"
       />
     </ul>
   );

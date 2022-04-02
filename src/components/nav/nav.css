@@ -133,3 +133,38 @@ a:-webkit-any-link {
     display: none;
   }
 }
+.av_sm {
+  height: 4rem;
+  width: 4rem;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.stc_user_area {
+  position: relative;
+}
+.stc_user_area:hover .stc_user_hover_area {
+  display: flex;
+}
+.stc_user_hover_area {
+  position: absolute;
+  top: 4rem;
+  text-align: end;
+  background: var(--VARIANT-1);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 2;
+}
+.stc_user_hover_area .stc_user_profile,
+.stc_user_hover_area .stc_logout_btn {
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  color: var(--PRIMARY);
+}

@@ -1,6 +1,9 @@
 import React from "react";
+import { useProduct } from "../../context";
 
-function FilterByPrice({ state, dispatch }) {
+function FilterByPrice() {
+  const { state, dispatch } = useProduct();
+
   return (
     <ul className="filter_list_section flex_column">
       <div className="filter_list_section_title">Price: ${state.price}</div>
