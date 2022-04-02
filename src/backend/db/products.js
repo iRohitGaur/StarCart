@@ -11,7 +11,7 @@ export const products = [
       bg: "stc_red",
     },
     image:
-      "https://ih1.redbubble.net/image.693030392.4277/ra,womens_tshirt,x1900,f89f2b:1617e563f0,front-c,140,125,1000,1000-bg,f8f8f8.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648895849/ra_womens_tshirt_x1900_f89f2b_1617e563f0_front-c_140_125_1000_1000-bg_f8f8f8_mzpglw.jpg",
     imageAlt: "womens_tshirt",
     title: "Eastern Rosella Fitted T-Shirt",
     seller: "Mel Tillery (Cyaneus)",
@@ -36,7 +36,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.1330554677.7875/gptr,1400x,front,black-c,188,133,1000,1000-bg,f8f8f8.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648895878/gptr_1400x_front_black-c_188_133_1000_1000-bg_f8f8f8_sjoquc.jpg",
     imageAlt: "classic_tee,mens",
     title: "Eclectus Parrot Graphic T-Shirt",
     seller: "Mel Tillery (Cyaneus)",
@@ -61,7 +61,7 @@ export const products = [
       bg: "stc_yellow",
     },
     image:
-      "https://ih1.redbubble.net/image.579363621.8008/ssrco,chiffon_top,womens,black,front,square_three_quarter,x1000-bg,f8f8f8.1u3.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648895904/ssrco_chiffon_top_womens_black_front_square_three_quarter_x1000-bg_f8f8f8.1u3_ksnsl3.jpg",
     imageAlt: "chiffon_top,womens",
     title: "Lovebird Chiffon Top",
     seller: "Mel Tillery (Cyaneus)",
@@ -86,7 +86,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.647394694.7571/ra,raglan,x1950,white_blue,front-c,160,90,1000,1000-bg,f8f8f8.u4.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648895946/ra_raglan_x1950_white_blue_front-c_160_90_1000_1000-bg_f8f8f8.u4_p24nbj.jpg",
     imageAlt: "classic_tee,mens",
     title: "Gouldian Finch Baseball ¾ Sleeve T-Shirt",
     seller: "Mel Tillery (Cyaneus)",
@@ -111,7 +111,7 @@ export const products = [
       bg: "stc_secondary",
     },
     image:
-      "https://ih1.redbubble.net/image.2442677018.2593/rco,womens_premium_t_shirt,womens,x1770,fafafa:ca443f4786,front-c,170,40,1000,1000-bg,f8f8f8.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648895993/rco_womens_premium_t_shirt_womens_x1770_fafafa_ca443f4786_front-c_170_40_1000_1000-bg_f8f8f8_o4n3ah.jpg",
     imageAlt: "womens_premium_t_shirt",
     title: "Purple-throated Euphonia Premium Scoop T-Shirt",
     seller: "Mel Tillery (Cyaneus)",
@@ -136,7 +136,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.642605753.5458/ssrco,mens_premium_t_shirt,mens,101010:01c5ca27c6,front,square_three_quarter,x1000-bg,f8f8f8.1u3.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896026/ssrco_mens_premium_t_shirt_mens_101010_01c5ca27c6_front_square_three_quarter_x1000-bg_f8f8f8.1u3_rlgy0u.jpg",
     imageAlt: "mens_premium_t_shirt",
     title: "Pink Headed Fruit Dove Premium T-Shirt",
     seller: "Mel Tillery (Cyaneus)",
@@ -161,7 +161,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.1139943781.1435/sss,small,product_square,1000x1000.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896071/sss_small_product_square_1000x1000_absog4.jpg",
     imageAlt: "Dusky-Headed Conure Sticker",
     title: "Dusky-Headed Conure Sticker",
     seller: "Mel Tillery (Cyaneus)",
@@ -186,7 +186,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.642539072.8882/sss,small,product_square,1000x1000.u1.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896105/sss_small_product_square_1000x1000.u1_dvvoxe.jpg",
     imageAlt: "Purple-Crowned Fairywren Sticker",
     title: "Purple-Crowned Fairywren Sticker",
     seller: "Mel Tillery (Cyaneus)",
@@ -211,7 +211,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.641032467.4277/sss,small,product_square,1000x1000.u2.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896142/sss_small_product_square_1000x1000.u2_mbrfae.jpg",
     imageAlt: "Eastern Rosella Sticker",
     title: "Eastern Rosella Sticker",
     seller: "Mel Tillery (Cyaneus)",
@@ -236,7 +236,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.647394693.7571/sss,small,product_square,1000x1000.u4.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896176/sss_small_product_square_1000x1000.u4_ngvfep.jpg",
     imageAlt: "Gouldian Finch Sticker",
     title: "Gouldian Finch Sticker",
     seller: "Mel Tillery (Cyaneus)",
@@ -261,7 +261,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.2442676930.2593/sss,small,product_square,1000x1000.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896225/sss_small_product_square_1000x1000_spnaey.jpg",
     imageAlt: "Purple-throated Euphonia Sticker",
     title: "Purple-throated Euphonia Sticker",
     seller: "Mel Tillery (Cyaneus)",
@@ -286,7 +286,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.646723912.8835/sss,small,product_square,1000x1000.u3.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896273/sss_small_product_square_1000x1000.u3_mqxash.jpg",
     imageAlt: "Oriental Dwarf Kingfisher Sticker",
     title: "Oriental Dwarf Kingfisher Sticker",
     seller: "Mel Tillery (Cyaneus)",
@@ -311,7 +311,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.1139567355.8835/ssrco,mhoodie,mens,ffdbcf:0a2802eb08,front,square_three_quarter,x1000-bg,f8f8f8.1u3.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896311/ssrco_mhoodie_mens_ffdbcf_0a2802eb08_front_square_three_quarter_x1000-bg_f8f8f8.1u3_ykynat.jpg",
     imageAlt: "Oriental Dwarf Kingfisher Pullover Hoodier",
     title: "Oriental Dwarf Kingfisher Pullover Hoodier",
     seller: "Mel Tillery (Cyaneus)",
@@ -336,7 +336,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.642643564.8882/ssrco,mhoodie,womens,oatmeal_heather,front,tall_three_quarter,x1000-bg,f8f8f8.1u2.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896378/ssrco_mhoodie_womens_oatmeal_heather_front_tall_three_quarter_x1000-bg_f8f8f8.1u2_waw7xb.jpg",
     imageAlt: "Purple-Crowned Fairywren Pullover Hoodie",
     title: "Purple-Crowned Fairywren Pullover Hoodie",
     seller: "Mel Tillery (Cyaneus)",
@@ -361,7 +361,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.647394694.7571/ssrco,mhoodie,womens,322e3f:696a94a5d4,front,square_three_quarter,x1000-bg,f8f8f8.1u4.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896433/ssrco_mhoodie_womens_322e3f_696a94a5d4_front_square_three_quarter_x1000-bg_f8f8f8.1u4_wiioxs.jpg",
     imageAlt: "Gouldian Finch Pullover Hoodie",
     title: "Gouldian Finch Pullover Hoodie",
     seller: "Mel Tillery (Cyaneus)",
@@ -386,7 +386,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.642605739.5458/ssrco,mhoodiez,mens,oatmeal_heather,front,square_three_quarter,1000x1000-bg,f8f8f8.u1.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896488/ssrco_mhoodiez_mens_oatmeal_heather_front_square_three_quarter_1000x1000-bg_f8f8f8.u1_gp56sp.jpg",
     imageAlt: "Pink Headed Fruit Dove Zipped Hoodie",
     title: "Pink Headed Fruit Dove Zipped Hoodie",
     seller: "Mel Tillery (Cyaneus)",
@@ -411,7 +411,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.1139943750.1435/ssrco,mhoodiez,womens,353d77:4d8b4ffd91,front,tall_three_quarter,750x1000-bg,f8f8f8.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896575/ssrco_mhoodiez_womens_353d77_4d8b4ffd91_front_tall_three_quarter_750x1000-bg_f8f8f8_dauxbe.jpg",
     imageAlt: "Dusky-Headed Conure Zipped Hoodie",
     title: "Dusky-Headed Conure Zipped Hoodie",
     seller: "Mel Tillery (Cyaneus)",
@@ -436,7 +436,7 @@ export const products = [
       bg: "",
     },
     image:
-      "https://ih1.redbubble.net/image.978000371.0426/ssrco,lightweight_hoodie,mens,royal_lightweight_hoodie,front,tall_three_quarter,x1000-bg,f8f8f8.2u1.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1648896625/ssrco_lightweight_hoodie_mens_royal_lightweight_hoodie_front_tall_three_quarter_x1000-bg_f8f8f8.2u1_vhqh4a.jpg",
     imageAlt: "Chubby Lovebird Lightweight Hoodie",
     title: "Chubby Lovebird Lightweight Hoodie",
     seller: "Mel Tillery (Cyaneus)",
