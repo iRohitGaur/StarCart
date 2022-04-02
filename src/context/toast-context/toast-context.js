@@ -16,7 +16,6 @@ function ToastProvider({ children }) {
   };
 
   const removeToast = (id) => {
-    console.log(toastStack);
     setToastStack((t) => t.filter((t) => t.id !== id));
   };
 
