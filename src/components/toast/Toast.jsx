@@ -18,7 +18,11 @@ function Toast({ toast }) {
   }, []);
 
   return (
-    <div className="sui_toast sui_toast_success stc_toast_fade">
+    <div
+      className={`sui_toast stc_toast_fade ${
+        toast.failure ? "sui_toast_danger" : "sui_toast_success"
+      }`}
+    >
       {toast.msg}
     </div>
   );

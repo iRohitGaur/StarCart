@@ -41,7 +41,7 @@ function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ token, user, setUserAndToken }}>
+    <AuthContext.Provider value={{ token, user, setUser, setUserAndToken }}>
       {children}
     </AuthContext.Provider>
   );

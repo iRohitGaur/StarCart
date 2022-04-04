@@ -1,0 +1,28 @@
+.profile_page {
+  grid-area: main;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: 6rem auto;
+}
+.profile_page_sidebar_wrapper {
+  display: flex;
+  gap: 1rem;
+}
+.profile_page_btn {
+  text-decoration: none;
+  background: var(--VARIANT-3-DARK2);
+  border: none;
+}
+.profile_page_btn:hover {
+  border: none;
+}
+.profile_page_btn_selected {
+  background: var(--VARIANT-2-DARK2);
+}
+.profile_page_btn_selected:hover {
+  background: var(--VARIANT-2-DARK2);
+  cursor: unset;
+}
+.profile_page_content_wrapper {
+  padding: 2rem 0;
+}
