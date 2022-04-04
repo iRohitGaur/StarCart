@@ -30,8 +30,8 @@ function App() {
         <Route element={<PrivateRoute />}>
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
-        <Route path="/profile" element={<Profile />} />
 
         <Route element={<RestrictedRoute />}>
           <Route path="/auth" element={<Auth />} />
