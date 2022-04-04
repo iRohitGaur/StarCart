@@ -22,11 +22,23 @@ function CartProvider({ children }) {
     }
   }, [user]);
 
+  const calculateCartQuantity = (cartArray) => {
+    console.log(cartArray.reduce((acc, val) => acc + val.cartQuantity, 0));
+    return cartArray.reduce((acc, val) => acc + val.cartQuantity, 0);
+  };
+
   useEffect(() => {
     if (response !== undefined) {
+      if (
+        calculateCartQuantity(response.cart) >
+        calculateCartQuantity(cartProducts)
+      ) {
+        sendToast("Product added to cart");
+      } else {
+        sendToast("Product removed from cart", true);
+      }
       setCartProducts(response.cart);
       setProcessingCart(null);
-      sendToast("Product added to cart");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [response]);

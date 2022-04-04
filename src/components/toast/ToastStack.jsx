@@ -7,7 +7,7 @@ function ToastStack() {
   const { toastStack } = useToast();
 
   return (
-    <div className="stc_toast_stack flex_column flex_gap1">
+    <div className="stc_toast_stack">
       {toastStack.map((toast) => (
         <Toast key={toast.id} toast={toast} />
       ))}

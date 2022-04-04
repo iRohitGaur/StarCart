@@ -14,6 +14,7 @@ import {
   Products,
   Auth,
   ProductDetail,
+  Profile,
 } from "./pages";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/cart" element={<Cart />} />
         </Route>
+        <Route path="/profile" element={<Profile />} />
 
         <Route element={<RestrictedRoute />}>
           <Route path="/auth" element={<Auth />} />

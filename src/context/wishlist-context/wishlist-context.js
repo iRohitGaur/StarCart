@@ -24,9 +24,13 @@ function WishlistProvider({ children }) {
 
   useEffect(() => {
     if (response !== undefined) {
+      if (response.wishlist.length > wishlistProducts.length) {
+        sendToast("Product added to wishlist");
+      } else {
+        sendToast("Product removed from wishlist", true);
+      }
       setWishlistProducts(response.wishlist);
       setProcessingWishlist(null);
-      sendToast("Product added to wishlist");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [response]);

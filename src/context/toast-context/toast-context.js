@@ -8,10 +8,10 @@ const useToast = () => useContext(ToastContext);
 function ToastProvider({ children }) {
   const [toastStack, setToastStack] = useState([]);
 
-  const sendToast = (message) => {
+  const sendToast = (message, failed = false) => {
     setToastStack((t) => [
       ...t,
-      { id: uuid(), msg: message, setTimeout: false },
+      { id: uuid(), msg: message, setTimeout: false, failure: failed },
     ]);
   };
 
