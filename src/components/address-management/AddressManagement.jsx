@@ -3,9 +3,11 @@ import Address from "./Address";
 import AddressList from "./AddressList";
 import "./address-management.css";
 import { useAddress } from "../../context";
+import { useDocumentTitle } from "../../utils";
 
 function AddressManagement() {
   const [isAddNewAddress, setIsAddNewAddress] = useState(false);
+  useDocumentTitle("StarCart - Address Management - Rohit Gaur");
 
   const [newAddress, setNewAddress] = useState({
     fullname: "",

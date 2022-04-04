@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { IcOutlineModeEdit } from "../../assets/Icons";
 import { useAuth } from "../../context";
+import { useDocumentTitle } from "../../utils";
 import Input from "../input/Input";
 import "./user-detail.css";
 
 function UserDetail() {
+  useDocumentTitle("StarCart - Profile Information - Rohit Gaur");
   const [isEditing, setIsEditing] = useState(false);
   const { user, setUser } = useAuth();
   const { firstName, email } = user ?? { firstName: "", email: "" };

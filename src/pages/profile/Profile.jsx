@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { AddressManagement, Orders, UserDetail } from "../../components";
+import { useDocumentTitle } from "../../utils";
 import "./profile.css";
 
 function Profile() {
   const [currentSelection, setCurrentSelection] = useState(0);
+  useDocumentTitle("StarCart - Profile - Rohit Gaur");
 
   return (
     <div className="profile_page">
