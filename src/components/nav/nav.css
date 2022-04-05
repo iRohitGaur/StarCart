@@ -168,3 +168,10 @@ a:-webkit-any-link {
   gap: 1rem;
   color: var(--PRIMARY);
 }
+.sui_search svg {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+}

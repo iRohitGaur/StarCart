@@ -12,9 +12,7 @@ function Nav() {
       }`}
     >
       <Logo />
-      {currentPath.pathname !== "/auth" && <Search mobile={false} />}
       <CTA />
-      {currentPath.pathname !== "/auth" && <Search mobile={true} />}
     </header>
   );
 }

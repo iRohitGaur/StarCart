@@ -3,6 +3,10 @@
   grid-template-columns: auto 1fr;
   padding-top: 2rem;
 }
+.productspage .sui_search {
+  padding-left: 1rem;
+  width: 95%;
+}
 .filter_area {
   color: var(--TEXT);
   padding: 0 2rem;
