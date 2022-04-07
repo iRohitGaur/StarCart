@@ -11,4 +11,5 @@ export { default as RestrictedRoute } from "./restricted-route/RestrictedRoute";
 export { default as ToastStack } from "./toast/ToastStack";
 export { default as UserDetail } from "./user-detail/UserDetail";
 export { default as AddressManagement } from "./address-management/AddressManagement";
+export { default as AddressListOrderSummary } from "./address-management/AddressListOrderSummary";
 export { default as Orders } from "./orders/Orders";

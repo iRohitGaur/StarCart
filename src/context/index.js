@@ -14,3 +14,5 @@ export { ProductProvider, useProduct } from "./product-context/product-context";
 export { ToastProvider, useToast } from "./toast-context/toast-context";
 
 export { AddressProvider, useAddress } from "./address-context/address-context";
+
+export { OrdersProvider, useOrders } from "./orders-context/orders-context";

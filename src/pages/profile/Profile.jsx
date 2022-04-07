@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { AddressManagement, Orders, UserDetail } from "../../components";
 import { useDocumentTitle } from "../../utils";
 import "./profile.css";
@@ -6,6 +7,18 @@ import "./profile.css";
 function Profile() {
   const [currentSelection, setCurrentSelection] = useState(0);
   useDocumentTitle("StarCart - Profile - Rohit Gaur");
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const section = searchParams.get("section");
+    if (section === "profile") {
+      setCurrentSelection(0);
+    } else if (section === "address") {
+      setCurrentSelection(1);
+    } else if (section === "orders") {
+      setCurrentSelection(2);
+    }
+  }, [searchParams]);
 
   return (
     <div className="profile_page">

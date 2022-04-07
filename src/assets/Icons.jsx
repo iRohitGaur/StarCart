@@ -440,3 +440,73 @@ export function IcRoundSearch(props) {
     </svg>
   );
 }
+export function UiwShoppingCart(props) {
+  return (
+    <svg width="1rem" height="1rem" viewBox="0 0 20 20" {...props}>
+      <path
+        fill="currentColor"
+        d="M1.36 17.23c.752 0 1.362.62 1.362 1.386c0 .765-.61 1.386-1.361 1.386c-.752 0-1.361-.62-1.361-1.386c0-.765.61-1.385 1.36-1.385Zm15.423 0c.752 0 1.36.62 1.36 1.386c0 .765-.608 1.386-1.36 1.386c-.751 0-1.36-.62-1.36-1.386c0-.765.609-1.385 1.36-1.385ZM19.972.498a.695.695 0 0 1-.46.86c-.714.215-1.178.486-1.405.783c-.239.313-.37.696-.393 1.131v9.561c-.04 1.114-.297 1.992-.798 2.62c-.521.656-1.321 1.025-2.424 1.132H3.55c-.977 0-1.784-.255-2.396-.782c-.612-.527-.99-1.29-1.145-2.26L0 13.432v-5.94c.046-1.03.369-1.88.977-2.516c.619-.645 1.483-.975 2.573-1.005h9.518c.376 0 .68.31.68.692a.687.687 0 0 1-.68.693h-9.5c-.74.02-1.266.221-1.617.588c-.36.376-.56.901-.59 1.579v5.85c.11.634.336 1.081.672 1.37c.345.298.842.455 1.517.455l10.875.003c.701-.07 1.166-.284 1.434-.622c.29-.364.464-.96.494-1.773v-9.57c.038-.747.264-1.403.68-1.948c.429-.56 1.131-.97 2.094-1.26a.679.679 0 0 1 .845.468Zm-6.904 11.04c.376 0 .68.31.68.692a.687.687 0 0 1-.68.693H4.759a.687.687 0 0 1-.68-.693c0-.383.305-.693.68-.693h8.309Zm0-3.696c.376 0 .68.31.68.693a.687.687 0 0 1-.68.693H4.759a.687.687 0 0 1-.68-.693c0-.382.305-.693.68-.693h8.309Z"
+      ></path>
+    </svg>
+  );
+}
+export function IcOutlineLocationOn(props) {
+  return (
+    <svg width="1rem" height="1rem" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="currentColor"
+        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zM7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 2.88-2.88 7.19-5 9.88C9.92 16.21 7 11.85 7 9z"
+      ></path>
+      <circle cx="12" cy="9" r="2.5" fill="currentColor"></circle>
+    </svg>
+  );
+}
+export function IcRoundCheck(props) {
+  return (
+    <svg width="1rem" height="1rem" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="currentColor"
+        d="M9 16.17L5.53 12.7a.996.996 0 1 0-1.41 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71a.996.996 0 1 0-1.41-1.41L9 16.17z"
+      ></path>
+    </svg>
+  );
+}
+export function IcOutlineDiscount(props) {
+  return (
+    <svg width="2rem" height="2rem" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="currentColor"
+        d="M12.79 21L3 11.21v2c0 .53.21 1.04.59 1.41l7.79 7.79c.78.78 2.05.78 2.83 0l6.21-6.21c.78-.78.78-2.05 0-2.83L12.79 21z"
+      ></path>
+      <path
+        fill="currentColor"
+        d="M11.38 17.41c.39.39.9.59 1.41.59c.51 0 1.02-.2 1.41-.59l6.21-6.21c.78-.78.78-2.05 0-2.83L12.62.58C12.25.21 11.74 0 11.21 0H5C3.9 0 3 .9 3 2v6.21c0 .53.21 1.04.59 1.41l7.79 7.79zM5 2h6.21L19 9.79L12.79 16L5 8.21V2z"
+      ></path>
+      <circle cx="7.25" cy="4.25" r="1.25" fill="currentColor"></circle>
+    </svg>
+  );
+}
+export function IcRoundClose(props) {
+  return (
+    <svg width="1.5rem" height="1.5rem" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="currentColor"
+        d="M18.3 5.71a.996.996 0 0 0-1.41 0L12 10.59L7.11 5.7A.996.996 0 1 0 5.7 7.11L10.59 12L5.7 16.89a.996.996 0 1 0 1.41 1.41L12 13.41l4.89 4.89a.996.996 0 1 0 1.41-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"
+      ></path>
+    </svg>
+  );
+}
+export function IconParkOutlineShare(props) {
+  return (
+    <svg width="1.6rem" height="1.6rem" viewBox="0 0 48 48" {...props}>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="4"
+        d="M28 6h14v14m0 9.474V39a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h9m7.8 16.2L41.1 6.9"
+      ></path>
+    </svg>
+  );
+}

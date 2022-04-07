@@ -45,19 +45,22 @@ function ProductCard({ product, btnTitle }) {
   const isProductInCart =
     cartProducts.findIndex((p) => p.id === product.id) === -1 ? false : true;
 
+  const currentPath = useLocation();
+
   const handleCardEvent = () => {
     user
       ? isProductInCart
         ? navigate("/cart")
         : addToCart(product)
-      : navigate("/auth");
+      : navigate("/auth", { state: { from: currentPath }, replace: true });
   };
 
   const handleWishlist = () => {
-    user ? toggleWishlist(product) : navigate("/auth");
+    user
+      ? toggleWishlist(product)
+      : navigate("/auth", { state: { from: currentPath }, replace: true });
   };
 
-  const currentPath = useLocation();
   const isHorizontalCard =
     currentPath.pathname === "/wishlist" || currentPath.pathname === "/cart";
 

@@ -4,7 +4,7 @@
   grid-template-columns: 1fr 32rem;
 }
 @media only screen and (max-width: 768px) {
-  main {
+  .cartpage {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 2rem;
@@ -12,6 +12,28 @@
   .cart_products_area .card_list {
     width: 100%;
   }
+}
+@media only screen and (max-width: 450px) {
+  .card_list .card_img_wrapper {
+    max-width: 100px;
+  }
+  .card_list .card_img_wrapper img {
+    width: 100%;
+    object-fit: cover;
+    min-width: 100px;
+  }
+}
+.no_items_in_cart {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 10rem;
+}
+.cart_products_btn {
+  width: fit-content;
+  padding: 0;
+  padding-left: 5px;
 }
 .card_list {
   width: 95%;

@@ -1,5 +1,5 @@
 import "./nav.css";
-import { Logo, Search, CTA } from "./index";
+import { Logo, CTA } from "./index";
 import { useLocation } from "react-router-dom";
 
 function Nav() {

@@ -23,7 +23,6 @@ function CartProvider({ children }) {
   }, [user]);
 
   const calculateCartQuantity = (cartArray) => {
-    console.log(cartArray.reduce((acc, val) => acc + val.cartQuantity, 0));
     return cartArray.reduce((acc, val) => acc + val.cartQuantity, 0);
   };
 
@@ -73,14 +72,49 @@ function CartProvider({ children }) {
     });
   };
 
+  const clearCart = () => {
+    setCartProducts([]);
+  };
+
+  const initialCartState = {
+    cartQuantity: 0,
+    totalPrice: 0,
+    discountedPrice: 0,
+  };
+
+  const cartSummary = cartProducts.reduce(
+    (acc, product) => ({
+      ...acc,
+      cartQuantity: acc.cartQuantity + product.cartQuantity,
+      totalPrice: acc.totalPrice + product.price.old * product.cartQuantity,
+      discountedPrice:
+        acc.discountedPrice + product.price.current * product.cartQuantity,
+    }),
+    initialCartState
+  );
+
+  const deliveryAmount =
+    cartSummary.discountedPrice === 0
+      ? 0
+      : cartSummary.discountedPrice < 50
+      ? 29
+      : cartSummary.discountedPrice < 100
+      ? 19
+      : cartSummary.discountedPrice < 150
+      ? 9
+      : 0;
+
   return (
     <CartContext.Provider
       value={{
         cartProducts,
+        cartSummary,
+        deliveryAmount,
         addToCart,
         updateProductQuantityInCart,
         removeFromCart,
         processingCart,
+        clearCart,
       }}
     >
       {children}

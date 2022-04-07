@@ -15,6 +15,7 @@ import {
   Auth,
   ProductDetail,
   Profile,
+  OrderSummary,
 } from "./pages";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/order-summary" element={<OrderSummary />} />
         </Route>
 
         <Route element={<RestrictedRoute />}>
