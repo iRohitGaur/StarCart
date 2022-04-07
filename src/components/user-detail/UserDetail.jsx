@@ -17,7 +17,7 @@ function UserDetail() {
   }, [firstName]);
 
   const handleToggleEditing = () => {
-    setIsEditing((e) => !e);
+    setIsEditing((editing) => !editing);
   };
 
   const isValidName = fName.length > 1;

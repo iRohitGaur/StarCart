@@ -41,7 +41,7 @@ function Home() {
           Featured Products
           <div className="feat_wrapper flex_row flex_gap2">
             {loading
-              ? [..."123456"].map((i) => <Card key={i} />)
+              ? [..."12345"].map((i) => <Card key={i} />)
               : featuredProducts
                   .filter((p) => p.featured)
                   .map((product) => (

@@ -124,9 +124,26 @@
   .collapsed {
     display: none;
   }
+  .products_page_products_container {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    min-width: 100vw;
+  }
 }
 @media only screen and (max-width: 400px) {
   .filter_area {
     top: 6rem;
   }
+}
+.products_page_pagination_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.products_page_pagination_btn {
+  width: fit-content;
+}
+.products_page_pagination_selected_page_btn {
+  pointer-events: none;
 }

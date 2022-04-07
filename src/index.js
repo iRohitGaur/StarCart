@@ -10,6 +10,7 @@ import {
   ProductProvider,
   ToastProvider,
   AddressProvider,
+  OrdersProvider,
 } from "./context";
 import App from "./App";
 import { makeServer } from "./server";
@@ -24,11 +25,13 @@ ReactDOM.render(
           <AddressProvider>
             <WishlistProvider>
               <CartProvider>
-                <FilterProvider>
-                  <ProductProvider>
-                    <App />
-                  </ProductProvider>
-                </FilterProvider>
+                <OrdersProvider>
+                  <FilterProvider>
+                    <ProductProvider>
+                      <App />
+                    </ProductProvider>
+                  </FilterProvider>
+                </OrdersProvider>
               </CartProvider>
             </WishlistProvider>
           </AddressProvider>

@@ -176,7 +176,7 @@ export const products = [
     category: "sticker",
     bird: "parrot",
     rating: 4,
-    featured: true,
+    featured: false,
     cartQuantity: 0,
   },
   {

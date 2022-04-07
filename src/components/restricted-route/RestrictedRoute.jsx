@@ -6,8 +6,10 @@ function RestrictedRoute() {
   const { user } = useAuth();
   const location = useLocation();
 
+  let from = location.state?.from?.pathname || "/";
+
   return user ? (
-    <Navigate to="/" state={{ from: location }} replace />
+    <Navigate to={from} state={{ from: location }} replace />
   ) : (
     <Outlet />
   );

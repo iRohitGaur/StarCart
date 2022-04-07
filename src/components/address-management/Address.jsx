@@ -9,6 +9,24 @@ export default function Address({
   setNewAddress,
   setIsAddNewAddress,
 }) {
+  const emptyAddress = {
+    fullname: "",
+    mobile: "",
+    pincode: "",
+    address: "",
+    city: "",
+    state: "",
+  };
+
+  const dummyAddress = {
+    fullname: "Navami Chacko",
+    mobile: "9999999999",
+    pincode: "386031",
+    address: "79, Mini Heights, Malad",
+    city: "Vishakhapattanam",
+    state: "Andhra Pradesh",
+  };
+
   const [valid, setValid] = useState(false);
 
   useEffect(() => {
@@ -42,16 +60,13 @@ export default function Address({
     updateOrSaveAddress(newAddress._id, newlyCreatedAddress);
   };
 
+  const handleDummyAddress = () => {
+    setNewAddress(dummyAddress);
+  };
+
   useEffect(() => {
     if (processingAddress === false) {
-      setNewAddress({
-        fullname: "",
-        mobile: "",
-        pincode: "",
-        address: "",
-        city: "",
-        state: "",
-      });
+      setNewAddress(emptyAddress);
       setIsAddNewAddress(false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -59,14 +74,7 @@ export default function Address({
 
   const handleCancelAddress = () => {
     setIsAddNewAddress(false);
-    setNewAddress({
-      fullname: "",
-      mobile: "",
-      pincode: "",
-      address: "",
-      city: "",
-      state: "",
-    });
+    setNewAddress(emptyAddress);
   };
 
   return (
@@ -144,6 +152,11 @@ export default function Address({
           </button>
         )}
       </div>
+      {!valid && (
+        <button className="sui_btn" onClick={handleDummyAddress}>
+          Add Dummy Address
+        </button>
+      )}
     </div>
   );
 }
