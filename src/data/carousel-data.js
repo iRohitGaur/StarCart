@@ -1,31 +1,31 @@
 const carouselData = [
   {
-    left: "https://ih1.redbubble.net/image.2253018999.2485/ssrco,classic_tee,mens,33281f:5b604c86ce,side,tall_three_quarter,750x1000.jpg",
+    left: "https://res.cloudinary.com/irohitgaur/image/upload/v1652767881/1652767678699_wkgs1a.jpg",
     center:
-      "https://ih1.redbubble.net/image.2253018999.2485/ssrco,classic_tee,two_models,9ec0d5:0d26d5c715,front,square_three_quarter,1000x1000.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1652767927/1652767916331_se2d9q.jpg",
     right:
-      "https://ih1.redbubble.net/image.2253018999.2485/ssrco,classic_tee,womens,33281f:5b604c86ce,front_alt,tall_three_quarter,750x1000.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1652767966/1652767958487_zczqzq.jpg",
   },
   {
-    left: "https://ih1.redbubble.net/image.642643564.8882/ssrco,classic_tee,mens,101010:01c5ca27c6,side,tall_three_quarter,750x1000.u2.jpg",
+    left: "https://res.cloudinary.com/irohitgaur/image/upload/v1652768023/1652768009379_p3doy7.jpg",
     center:
-      "https://ih1.redbubble.net/image.642643564.8882/ssrco,classic_tee,two_models,fafafa:ca443f4786,front,square_three_quarter,1000x1000.u2.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1652768070/1652768055497_dch2lc.jpg",
     right:
-      "https://ih1.redbubble.net/image.642643564.8882/ssrco,classic_tee,womens,101010:01c5ca27c6,front_alt,tall_three_quarter,750x1000.u2.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1652768105/1652768096277_wyexeu.jpg",
   },
   {
-    left: "https://ih1.redbubble.net/image.647394694.7571/ssrco,classic_tee,mens,e5d6c5:f62bbf65ee,side,tall_three_quarter,750x1000.u4.jpg",
+    left: "https://res.cloudinary.com/irohitgaur/image/upload/v1652768167/1652768158812_xw2w5a.jpg",
     center:
-      "https://ih1.redbubble.net/image.647394694.7571/ssrco,classic_tee,two_models,541e68:68f9e309b0,front,square_three_quarter,1000x1000.u4.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1652768204/1652768195961_ezlwij.jpg",
     right:
-      "https://ih1.redbubble.net/image.647394694.7571/ssrco,classic_tee,womens,e5d6c5:f62bbf65ee,front_alt,tall_three_quarter,750x1000.u4.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1652768245/1652768237846_hugtqp.jpg",
   },
   {
-    left: "https://ih1.redbubble.net/image.642624506.4902/ssrco,classic_tee,mens,5a1f32:a6197194c6,side,tall_three_quarter,750x1000.u1.jpg",
+    left: "https://res.cloudinary.com/irohitgaur/image/upload/v1652768392/1652768383368_vyr2o8.jpg",
     center:
-      "https://ih1.redbubble.net/image.642624506.4902/ssrco,classic_tee,two_models,e5d6c5:f62bbf65ee,front,square_three_quarter,1000x1000.u1.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1652768427/1652768420479_oj0css.jpg",
     right:
-      "https://ih1.redbubble.net/image.642624506.4902/ssrco,classic_tee,womens,5a1f32:a6197194c6,front_alt,tall_three_quarter,750x1000.u1.jpg",
+      "https://res.cloudinary.com/irohitgaur/image/upload/v1652768462/1652768455222_xip7xi.jpg",
   },
 ];
 
