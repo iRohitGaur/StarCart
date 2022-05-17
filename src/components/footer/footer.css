@@ -1,0 +1,35 @@
+footer {
+  grid-area: footer;
+  position: relative;
+  width: 100vw;
+  background: var(--SHADE);
+  padding: 2rem 0;
+  margin-top: 6rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+footer .sui_logo {
+  width: 4rem;
+}
+footer .sui_logo_text,
+footer .sui_btn {
+  color: var(--TEXT);
+  line-height: 1;
+  text-decoration: none;
+}
+footer .stc_logo_caption {
+  color: var(--PRIMARY);
+}
+footer .sui_btn {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding: 0;
+}
+.ftr_title {
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  color: var(--GRAY);
+}

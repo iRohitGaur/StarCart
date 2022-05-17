@@ -1,0 +1,87 @@
+.product_rating {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--WHITE);
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 1.2rem;
+}
+.product_rating_good {
+  background: var(--VARIANT-2-DARK2);
+}
+.product_rating_medium {
+  background: var(--VARIANT-3-DARK2);
+}
+.product_rating_bad {
+  background: var(--VARIANT-1-DARK2);
+}
+.card_content_title {
+  cursor: pointer;
+  color: var(--PRIMARY);
+}
+.card_content_seller {
+  gap: 5px;
+}
+.card_content_seller a {
+  color: var(--PRIMARY);
+}
+.card_price,
+.card_content_title,
+.card_content_desc,
+.card_content_seller {
+  padding-left: 5px;
+}
+.card_list img {
+  min-width: 200px;
+}
+/* PLACEHOLDER CARD */
+.stc_placeholder {
+  background: linear-gradient(70deg, #dfdfdf 8%, #f1f1f1 18%, #dfdfdf 33%);
+  background-size: 200% 100%;
+  animation: 1s shine linear infinite;
+}
+.stc_placeholder_wrapper {
+  width: 250px;
+  height: 348px;
+  box-shadow: 0 0 5px gray;
+  border-radius: 8px;
+}
+.stc_placeholder_image {
+  height: 200px;
+}
+.stc_placeholder_details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+.stc_placeholder_title,
+.stc_placeholder_seller,
+.stc_placeholder_cta {
+  height: 36px;
+  border-radius: 4px;
+}
+.stc_desc_detail {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+.spinning_loader {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

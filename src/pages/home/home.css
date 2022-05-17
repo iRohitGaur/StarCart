@@ -1,0 +1,107 @@
+body {
+  overflow-x: hidden;
+  height: 100%;
+}
+#root {
+  display: grid;
+  font-size: 1.6rem;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  min-height: 100vh;
+}
+.homepage {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "carousel"
+    "hcontent";
+  grid-template-rows: 50rem 1fr;
+}
+.carousel {
+  grid-area: carousel;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  overflow: hidden;
+  background: var(--SHADE);
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .carousel {
+    grid-template-columns: 0 2fr 0;
+  }
+}
+.parallax_slider {
+  transition: opacity 0.4s ease-in;
+  -webkit-transition: opacity 0.4s ease-in;
+  -moz-transition: opacity 0.4s ease-in;
+  -ms-transition: opacity 0.4s ease-in;
+  -o-transition: opacity 0.4s ease-in;
+  opacity: 0;
+}
+.transitioning_src {
+  transition: opacity 0.4s ease-out;
+  -webkit-transition: opacity 0.4s ease-out;
+  -moz-transition: opacity 0.4s ease-out;
+  -ms-transition: opacity 0.4s ease-out;
+  -o-transition: opacity 0.4s ease-out;
+  opacity: 1;
+}
+.home_content {
+  grid-area: hcontent;
+  width: 100%;
+  align-items: center;
+}
+.carousel img {
+  width: 100%;
+  height: 100%;
+}
+.carousel_btn {
+  position: absolute;
+  bottom: 2rem;
+  left: calc(50% - 13rem);
+  font-size: 3rem;
+  width: 26rem;
+}
+.stc_feat {
+  width: 100%;
+  margin-top: 6rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  align-items: center;
+  gap: 1rem;
+}
+.feat_wrapper {
+  margin-top: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pop_wrapper {
+  max-width: var(--MAX-WIDTH);
+  margin: 2rem 2rem 0;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.pop_wrapper img {
+  width: 100%;
+}
+.pop_wrapper img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 4px 0 var(--TEXT);
+}
+.pop_cat {
+  position: relative;
+}
+.pop_cat span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: var(--SHADE);
+  opacity: 0.7;
+}

@@ -1,0 +1,39 @@
+.sui_toast {
+  z-index: 999;
+  font-size: 1.4rem;
+}
+.stc_toast_stack {
+  position: fixed;
+  top: 8rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  .stc_toast_stack {
+    top: 14rem;
+  }
+}
+.stc_toast_fade {
+  animation: fadeout 2s linear;
+}
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+}
