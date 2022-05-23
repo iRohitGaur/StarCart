@@ -30,7 +30,7 @@ function Cart() {
     const shareUrl = cartProducts.reduce(
       (acc, val, index) =>
         index === 0 ? `${acc}${val._id}` : `${acc},${val._id}`,
-      "https://starcart-react.netlify.app/products?cart="
+      `https://${window.location.host}/products?cart=`
     );
     try {
       await navigator.clipboard.writeText(shareUrl);
