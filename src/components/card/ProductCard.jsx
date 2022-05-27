@@ -84,7 +84,8 @@ function ProductCard({ product, btnTitle }) {
       ? "product_rating_medium"
       : "product_rating_bad";
 
-  const goToProductDetail = () => {
+  const goToProductDetail = (e) => {
+    e.stopPropagation();
     navigate(`/products/${product._id}`);
   };
 
@@ -118,7 +119,7 @@ function ProductCard({ product, btnTitle }) {
           {product.rating}
           <UiwStarOn />
         </div>
-        <img src={image} alt={imageAlt} />
+        <img src={image} alt={imageAlt} onClick={(e) => goToProductDetail(e)} />
       </div>
       <div className="card_content_wrapper">
         <h2

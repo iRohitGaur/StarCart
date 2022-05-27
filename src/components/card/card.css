@@ -38,6 +38,9 @@
 .card_list img {
   min-width: 200px;
 }
+.card_img_wrapper img {
+  cursor: pointer;
+}
 /* PLACEHOLDER CARD */
 .stc_placeholder {
   background: linear-gradient(70deg, #dfdfdf 8%, #f1f1f1 18%, #dfdfdf 33%);
