@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 import logo from "../../assets/logo.png";
 import {
   UiwShoppingCart,
@@ -22,15 +23,24 @@ function OrderSummary() {
   const initialAddress = { _id: "", fullname: "", mobile: "" };
   const initialCoupon = { input: "", discount: 0, chip: "" };
   const { cartProducts, cartSummary, deliveryAmount } = useCart();
-  const { address } = useAddress();
+  const { address, updateOrSaveAddress } = useAddress();
   const [selectedAddress, setSelectedAddress] = useState(initialAddress);
   const [coupon, setCoupon] = useState(initialCoupon);
   const { user } = useAuth();
   const { sendToast } = useToast();
   const { processingOrders, placeOrder } = useOrders();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    setSelectedAddress(address.length !== 0 ? address[0] : null);
+    if (cartProducts.length === 0) {
+      navigate(-1);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    setSelectedAddress(address.length !== 0 ? address[0] : initialAddress);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [address]);
 
   useEffect(() => {
@@ -40,10 +50,21 @@ function OrderSummary() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [processingOrders]);
 
-  const navigate = useNavigate();
-
   const handleAddNewAddress = () => {
     navigate("/profile?section=address");
+  };
+
+  const handleAddDummyAddress = () => {
+    const dummyAddress = {
+      _id: uuid(),
+      fullname: "Guest User",
+      mobile: "9999999999",
+      pincode: "562123",
+      address: "10th Mile, Tumkur Road, Madavara Post, Dasanapura Hobli",
+      city: "Bangalore",
+      state: "Karnataka",
+    };
+    updateOrSaveAddress(null, dummyAddress);
   };
 
   const navigateToOrders = () => {
@@ -168,6 +189,12 @@ function OrderSummary() {
               onClick={handleAddNewAddress}
             >
               Add New Address
+            </button>
+            <button
+              className="sui_btn btn_outline add_new_address_btn"
+              onClick={handleAddDummyAddress}
+            >
+              Add Dummy Address
             </button>
           </div>
         </div>

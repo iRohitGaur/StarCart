@@ -33,7 +33,8 @@ function Products() {
   );
 
   let productsToShow = isSearchActive ? searchedProducts : filteredData;
-  // RG: If shared card opened show relevant products
+
+  // RG: If shared cart opened, show relevant products
   if (sharedCart) {
     productsToShow = productsToShow.filter((p) => sharedCart.includes(p._id));
   }
@@ -45,12 +46,17 @@ function Products() {
     if (page === 0) {
       return productsToShow.slice(0, 8);
     }
-    const startingRange = page * 8;
-    const endingRange =
-      productsToShow.length < startingRange + 7
-        ? productsToShow.length
-        : startingRange + 8;
-    return productsToShow.slice(startingRange, endingRange);
+
+    if (page * 8 < productsToShow.length) {
+      const startingRange = page * 8;
+      const endingRange =
+        productsToShow.length < startingRange + 7
+          ? productsToShow.length
+          : startingRange + 8;
+      return productsToShow.slice(startingRange, endingRange);
+    }
+    setCurrentPage(1);
+    return productsToShow.slice(0, 8);
   };
 
   const paginatedProducts = getproductsForPage(currentPage);
@@ -68,6 +74,8 @@ function Products() {
           <div className="product_area flex_row flex_gap2 flex_wrap">
             {loading
               ? [..."12345"].map((i) => <Card key={i} />)
+              : paginatedProducts.length === 0
+              ? "No items to show"
               : paginatedProducts.map((product) => (
                   <Card
                     key={product.id}
