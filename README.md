@@ -75,7 +75,3 @@ To view different pages of StarCart you can visit the following links:
   - Bird species
 - Responsive Site (Both desktop and mobile responsive)
 - Dark Mode
-
----
-
-#### Learning and Growing with [@neogcamp](https://twitter.com/neogcamp)
